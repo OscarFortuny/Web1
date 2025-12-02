@@ -14,20 +14,20 @@ export async function getUsuariById(req, res) {
 export async function addUsuari(req, res) {
     const newUsuari = req.body;
 
-    if (!newFilm.title 
-        || !newFilm.episode_id
-        || !newFilm.opening_crawl
-        || !newFilm.director    
-        || !newFilm.release_date) {
-        return res.status(400).json({ error: 'Missing required film fields' });
+    if (!newUsuari.name 
+        || !newUsuari.usuari_id
+        || !newUsuari.genere
+        || !newUsuari.language    
+        || !newUsuari.destination) {
+        return res.status(400).json({ error: 'Missing required usuari fields' });
     }
 
-    const filmExists = await getDBFilmById(newFilm.episode_id);
-    if (filmExists) {
-        return res.status(409).json({ error: 'Film with this episode_id already exists' });
+    const usuariExists = await getDBUsuariById(newUsuari.usuari_id);
+    if (usuariExists) {
+        return res.status(409).json({ error: 'Usuari with this usuari_id already exists' });
     }
 
-    const addedFilm = await addDBFilm(newFilm);
-    res.status(201).json(addedFilm);
+    const addedUsuari = await addDBUsuari(newUsuari);
+    res.status(201).json(addedUsuari);
 }
 
