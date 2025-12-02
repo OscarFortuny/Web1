@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { filmsRouter } from './routes/films.routes.js';
 import cors from 'cors';
-import { connectToDatabase } from '../infrastructure/mongodb-connextion.js';
+import { connectToDatabase } from './infrastructure/mongodb-connextion.js';
 
 
 await connectToDatabase();

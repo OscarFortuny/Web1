@@ -1,4 +1,4 @@
-import { mondodbInstance } from '../../infrastructure/mongodb-connextion.js';
+import { mondodbInstance } from '../infrastructure/mongodb-connextion.js';
 
 const usuariMongooseSchema = new mondodbInstance.Schema({
 	name: String,
