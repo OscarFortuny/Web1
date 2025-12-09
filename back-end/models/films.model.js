@@ -1,4 +1,4 @@
-import { mondodbInstance } from '../../infrastructure/mongodb-connextion.js';
+import { mondodbInstance } from '../infrastructure/mongodb-connextion.js';
 
 const filmMongooseSchema = new mondodbInstance.Schema({
 	title: String,
