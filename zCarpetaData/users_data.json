@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Joan García",
+        "usuari_id": 1,
+        "genere": "male",
+        "language": "catala",
+        "destination_university": 4, 
+        "local_university": 1
+    },
+    {
+        "name": "Marta Soler",
+        "usuari_id": 2,
+        "genere": "female",
+        "language": "castellano",
+        "destination_university": 9,
+        "local_university": 1
+    },
+    {
+        "name": "Alex Bosc",
+        "usuari_id": 3,
+        "genere": "male",
+        "language": "angles",
+        "destination_university": 12,
+        "local_university": 5
+    },
+    {
+        "name": "Laura Pi",
+        "usuari_id": 4,
+        "genere": "female",
+        "language": "catala",
+        "destination_university": 3,
+        "local_university": 15
+    },
+    {
+        "name": "Carles Roig",
+        "usuari_id": 5,
+        "genere": "male",
+        "language": "castellano",
+        "destination_university": 10,
+        "local_university": 7
+    },
+    {
+        "name": "Sofia Llop",
+        "usuari_id": 6,
+        "genere": "female",
+        "language": "angles",
+        "destination_university": 14,
+        "local_university": 8
+    },
+    {
+        "name": "Pau Fuster",
+        "usuari_id": 7,
+        "genere": "male",
+        "language": "catala",
+        "destination_university": 2,
+        "local_university": 13
+    },
+    {
+        "name": "Elena Vidal",
+        "usuari_id": 8,
+        "genere": "female",
+        "language": "castellano",
+        "destination_university": 6,
+        "local_university": 11
+    },
+    {
+        "name": "Marc Serra",
+        "usuari_id": 9,
+        "genere": "male",
+        "language": "angles",
+        "destination_university": 7,
+        "local_university": 12
+    },
+    {
+        "name": "Júlia Pons",
+        "usuari_id": 10,
+        "genere": "female",
+        "language": "catala",
+        "destination_university": 13,
+        "local_university": 4
+    }
+]

@@ -15,7 +15,7 @@ export async function addUniversitat(req, res) {
     const newUniversitat = req.body;
 
     if (!newUniversitat.name
-        || !newUniversitat.universitat_id 
+        || newUniversitat.universitat_id === undefined 
         || !newUniversitat.country
         || !newUniversitat.city    
         || !newUniversitat.email) {

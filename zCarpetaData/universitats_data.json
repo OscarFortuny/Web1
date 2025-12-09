@@ -1,0 +1,352 @@
+[
+    {
+        "name": "Universitat de Barcelona",
+        "universitat_id": 1,
+        "country": "Spain",
+        "city": "Barcelona",
+        "email": "ub@mail.cat"
+    },
+    {
+        "name": "Politecnico di Milano",
+        "universitat_id": 2,
+        "country": "Italy",
+        "city": "Milan",
+        "email": "polimi@mail.it"
+    },
+    {
+        "name": "Sorbonne Université",
+        "universitat_id": 3,
+        "country": "France",
+        "city": "Paris",
+        "email": "sorbonne@mail.fr"
+    },
+    {
+        "name": "University of Oxford",
+        "universitat_id": 4,
+        "country": "United Kingdom",
+        "city": "Oxford",
+        "email": "oxford@mail.uk"
+    },
+    {
+        "name": "Technical University of Munich (TUM)",
+        "universitat_id": 5,
+        "country": "Germany",
+        "city": "Munich",
+        "email": "tum@mail.de"
+    },
+    {
+        "name": "University of Vienna",
+        "universitat_id": 6,
+        "country": "Austria",
+        "city": "Vienna",
+        "email": "univienna@mail.at"
+    },
+    {
+        "name": "University of Lisbon",
+        "universitat_id": 7,
+        "country": "Portugal",
+        "city": "Lisbon",
+        "email": "ulisboa@mail.pt"
+    },
+    {
+        "name": "Delft University of Technology",
+        "universitat_id": 8,
+        "country": "Netherlands",
+        "city": "Delft",
+        "email": "tudelft@mail.nl"
+    },
+    {
+        "name": "ETH Zurich",
+        "universitat_id": 9,
+        "country": "Switzerland",
+        "city": "Zurich",
+        "email": "eth@mail.ch"
+    },
+    {
+        "name": "Lomonosov Moscow State University",
+        "universitat_id": 10,
+        "country": "Russia",
+        "city": "Moscow",
+        "email": "lomonosov@mail.ru"
+    },
+    {
+        "name": "Tsinghua University",
+        "universitat_id": 11,
+        "country": "China",
+        "city": "Beijing",
+        "email": "tsinghua@mail.cn"
+    },
+    {
+        "name": "Massachusetts Institute of Technology (MIT)",
+        "universitat_id": 12,
+        "country": "USA",
+        "city": "Cambridge",
+        "email": "mit@mail.us"
+    },
+    {
+        "name": "University of Toronto",
+        "universitat_id": 13,
+        "country": "Canada",
+        "city": "Toronto",
+        "email": "utoronto@mail.ca"
+    },
+    {
+        "name": "University of Melbourne",
+        "universitat_id": 14,
+        "country": "Australia",
+        "city": "Melbourne",
+        "email": "unimelb@mail.au"
+    },
+    {
+        "name": "National University of Singapore (NUS)",
+        "universitat_id": 15,
+        "country": "Singapore",
+        "city": "Singapore",
+        "email": "nus@mail.sg"
+    },
+    {
+        "name": "King's College London",
+        "universitat_id": 16,
+        "country": "United Kingdom",
+        "city": "London",
+        "email": "kcl@mail.uk"
+    },
+    {
+        "name": "The University of Tokyo",
+        "universitat_id": 17,
+        "country": "Japan",
+        "city": "Tokyo",
+        "email": "utokyo@mail.jp"
+    },
+    {
+        "name": "Heidelberg University",
+        "universitat_id": 18,
+        "country": "Germany",
+        "city": "Heidelberg",
+        "email": "uniheidelberg@mail.de"
+    },
+    {
+        "name": "University of Sydney",
+        "universitat_id": 19,
+        "country": "Australia",
+        "city": "Sydney",
+        "email": "usydney@mail.au"
+    },
+    {
+        "name": "University of Copenhagen",
+        "universitat_id": 20,
+        "country": "Denmark",
+        "city": "Copenhagen",
+        "email": "ku@mail.dk"
+    },
+    {
+        "name": "Karolinska Institutet",
+        "universitat_id": 21,
+        "country": "Sweden",
+        "city": "Stockholm",
+        "email": "ki@mail.se"
+    },
+    {
+        "name": "University of Amsterdam",
+        "universitat_id": 22,
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "email": "uva@mail.nl"
+    },
+    {
+        "name": "University of Helsinki",
+        "universitat_id": 23,
+        "country": "Finland",
+        "city": "Helsinki",
+        "email": "helsinki@mail.fi"
+    },
+    {
+        "name": "University of Oslo",
+        "universitat_id": 24,
+        "country": "Norway",
+        "city": "Oslo",
+        "email": "uio@mail.no"
+    },
+    {
+        "name": "Swiss Federal Institute of Technology Lausanne (EPFL)",
+        "universitat_id": 25,
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "email": "epfl@mail.ch"
+    },
+    {
+        "name": "University of Hong Kong (HKU)",
+        "universitat_id": 26,
+        "country": "Hong Kong",
+        "city": "Hong Kong",
+        "email": "hku@mail.hk"
+    },
+    {
+        "name": "Peking University",
+        "universitat_id": 27,
+        "country": "China",
+        "city": "Beijing",
+        "email": "pku@mail.cn"
+    },
+    {
+        "name": "University of Sao Paulo",
+        "universitat_id": 28,
+        "country": "Brazil",
+        "city": "Sao Paulo",
+        "email": "usp@mail.br"
+    },
+    {
+        "name": "University of Cape Town",
+        "universitat_id": 29,
+        "country": "South Africa",
+        "city": "Cape Town",
+        "email": "uct@mail.za"
+    },
+    {
+        "name": "University of Chile",
+        "universitat_id": 30,
+        "country": "Chile",
+        "city": "Santiago",
+        "email": "uchile@mail.cl"
+    },
+    {
+        "name": "National Autonomous University of Mexico (UNAM)",
+        "universitat_id": 31,
+        "country": "Mexico",
+        "city": "Mexico City",
+        "email": "unam@mail.mx"
+    },
+    {
+        "name": "Complutense University of Madrid",
+        "universitat_id": 32,
+        "country": "Spain",
+        "city": "Madrid",
+        "email": "ucm@mail.es"
+    },
+    {
+        "name": "Bocconi University",
+        "universitat_id": 33,
+        "country": "Italy",
+        "city": "Milan",
+        "email": "bocconi@mail.it"
+    },
+    {
+        "name": "École Polytechnique Fédérale de Paris (Palaiseau)",
+        "universitat_id": 34,
+        "country": "France",
+        "city": "Palaiseau",
+        "email": "epfp@mail.fr"
+    },
+    {
+        "name": "University of Edinburgh",
+        "universitat_id": 35,
+        "country": "United Kingdom",
+        "city": "Edinburgh",
+        "email": "uedin@mail.uk"
+    },
+    {
+        "name": "Technical University of Berlin",
+        "universitat_id": 36,
+        "country": "Germany",
+        "city": "Berlin",
+        "email": "tub@mail.de"
+    },
+    {
+        "name": "University of Graz",
+        "universitat_id": 37,
+        "country": "Austria",
+        "city": "Graz",
+        "email": "unigraz@mail.at"
+    },
+    {
+        "name": "University of Porto",
+        "universitat_id": 38,
+        "country": "Portugal",
+        "city": "Porto",
+        "email": "uporto@mail.pt"
+    },
+    {
+        "name": "Wageningen University & Research",
+        "universitat_id": 39,
+        "country": "Netherlands",
+        "city": "Wageningen",
+        "email": "wur@mail.nl"
+    },
+    {
+        "name": "University of Geneva",
+        "universitat_id": 40,
+        "country": "Switzerland",
+        "city": "Geneva",
+        "email": "unige@mail.ch"
+    },
+    {
+        "name": "Saint Petersburg State University",
+        "universitat_id": 41,
+        "country": "Russia",
+        "city": "Saint Petersburg",
+        "email": "spbu@mail.ru"
+    },
+    {
+        "name": "Fudan University",
+        "universitat_id": 42,
+        "country": "China",
+        "city": "Shanghai",
+        "email": "fudan@mail.cn"
+    },
+    {
+        "name": "Stanford University",
+        "universitat_id": 43,
+        "country": "USA",
+        "city": "Stanford",
+        "email": "stanford@mail.us"
+    },
+    {
+        "name": "McGill University",
+        "universitat_id": 44,
+        "country": "Canada",
+        "city": "Montreal",
+        "email": "mcgill@mail.ca"
+    },
+    {
+        "name": "Australian National University (ANU)",
+        "universitat_id": 45,
+        "country": "Australia",
+        "city": "Canberra",
+        "email": "anu@mail.au"
+    },
+    {
+        "name": "Nanyang Technological University (NTU)",
+        "universitat_id": 46,
+        "country": "Singapore",
+        "city": "Singapore",
+        "email": "ntu@mail.sg"
+    },
+    {
+        "name": "The University of Manchester",
+        "universitat_id": 47,
+        "country": "United Kingdom",
+        "city": "Manchester",
+        "email": "manchester@mail.uk"
+    },
+    {
+        "name": "Kyoto University",
+        "universitat_id": 48,
+        "country": "Japan",
+        "city": "Kyoto",
+        "email": "kyoto-u@mail.jp"
+    },
+    {
+        "name": "University of Munich (LMU)",
+        "universitat_id": 49,
+        "country": "Germany",
+        "city": "Munich",
+        "email": "lmu@mail.de"
+    },
+    {
+        "name": "Aarhus University",
+        "universitat_id": 50,
+        "country": "Denmark",
+        "city": "Aarhus",
+        "email": "au@mail.dk"
+    }
+]
