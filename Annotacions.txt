@@ -1,7 +1,7 @@
 Per iniciat el backend simplement:
-    cd backend-example
+    cd back-end
     node --watch index.js
 
 Per iniciar el frontend simplement:
-    cd app-example
+    cd front-end
     ng serve
