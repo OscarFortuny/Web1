@@ -10,3 +10,5 @@ Els components:
     pages: son les pagines dintre de la web com la inicial o la del perfil o la de busqueda
     parts: son les parts de la web que esstaran a les pagines que nosaltres 
     decidirem com el footer o el header
+
+El styles.css de la app crea estils globals a tot el projecte 
