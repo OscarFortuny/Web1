@@ -14,11 +14,12 @@ export async function getUsuariById(req, res) {
 export async function addUsuari(req, res) {
     const newUsuari = req.body;
 
-    if (!newUsuari.name 
-        || !newUsuari.usuari_id
+    if (!newUsuari.name
+        || !newUsuari.usuari_id 
         || !newUsuari.genere
         || !newUsuari.language    
-        || !newUsuari.destination) {
+        || !newUsuari.destination_university
+        || !newUsuari.local_university) {
         return res.status(400).json({ error: 'Missing required usuari fields' });
     }
 

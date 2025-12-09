@@ -7,8 +7,8 @@ const universitatMongooseSchema = new mondodbInstance.Schema({
     unique: true,
     index: true,
     },
-    pais: String,
-    ciutat: String,
+    country: String,
+    city: String,
     email: String,
 });
 

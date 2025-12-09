@@ -9,8 +9,8 @@ const usuariMongooseSchema = new mondodbInstance.Schema({
 	},
 	genere: String,
 	language: String,
-	destination: String,
-	university: String,
+	destination_university: String,
+	local_university: String,
 });
 
 

@@ -14,16 +14,16 @@ export async function getUniversitatById(req, res) {
 export async function addUniversitat(req, res) {
     const newUniversitat = req.body;
 
-    if (!newUniversitat.name 
-        || !newUniversitat.universitat_id
-        || !newUniversitat.pais
-        || !newUniversitat.ciutat    
+    if (!newUniversitat.name
+        || !newUniversitat.universitat_id 
+        || !newUniversitat.country
+        || !newUniversitat.city    
         || !newUniversitat.email) {
         return res.status(400).json({ error: 'Missing required universitat fields' });
     }
 
-    const universitatExists = await getDBUniversitatById(newUniversitat.universitat_id);
-    if (universitatExists) {
+    const UniversitatExists = await getDBUniversitatById(newUniversitat.universitat_id);
+    if (UniversitatExists) {
         return res.status(409).json({ error: 'Universitat with this universitat_id already exists' });
     }
 
