@@ -1,6 +1,8 @@
 import { mondodbInstance } from '../infrastructure/mongodb-connextion.js';
 
 const usuariMongooseSchema = new mondodbInstance.Schema({
+	username: String,
+	password: String,
 	name: String,
 	usuari_id: {
 	type: Number,
