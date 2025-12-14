@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Grup A",
+        "grup_id": 1,
+        "universitat_id": 1,
+        "description": "Grup d'estudiants de la Universitat de Barcelona"
+    },
+    {
+        "name": "Grup B",
+        "grup_id": 2,
+        "universitat_id": 2,
+        "description": "Grup d'investigació del Politecnico di Milano"
+    },
+    {
+        "name": "Grup C",
+        "grup_id": 3,
+        "universitat_id": 3,
+        "description": "Grup d'alumnes de Sorbonne Université"
+    },
+    {
+        "name": "Grup D",
+        "grup_id": 4,
+        "universitat_id": 4,
+        "description": "Grup d'estudiants de la University of Oxford"
+    },
+    {
+        "name": "Grup E",
+        "grup_id": 5,
+        "universitat_id": 5,
+        "description": "Grup de recerca de la Technical University of Munich (TUM)"
+    },
+    {
+        "name": "Grup F",
+        "grup_id": 6,
+        "universitat_id": 6,
+        "description": "Grup d'estudiants de la University of Vienna"
+    },
+    {
+        "name": "Grup G",
+        "grup_id": 7,
+        "universitat_id": 7,
+        "description": "Grup d'alumnes de la University of Lisbon"
+    },
+    {
+        "name": "Grup H",
+        "grup_id": 8,
+        "universitat_id": 8,
+        "description": "Grup d'investigació de la Delft University of Technology"
+    },
+    {
+        "name": "Grup I",
+        "grup_id": 9,
+        "universitat_id": 9,
+        "description": "Grup d'estudiants de l'ETH Zurich"
+    },
+    {
+        "name": "Grup J",
+        "grup_id": 10,
+        "universitat_id": 10,
+        "description": "Grup d'alumnes de la University of Cambridge"
+    },
+    {
+        "name": "Grup K",
+        "grup_id": 11,
+        "universitat_id": 11,
+        "description": "Grup d'investigació de la University of Edinburgh"
+    },
+    {
+        "name": "Grup L",
+        "grup_id": 12,
+        "universitat_id": 12,
+        "description": "Grup d'estudiants de la KU Leuven"
+    },
+    {
+        "name": "Grup M",
+        "grup_id": 13,
+        "universitat_id": 13,
+        "description": "Grup d'alumnes de la University of Helsinki"
+    },
+    {
+        "name": "Grup N",
+        "grup_id": 14,
+        "universitat_id": 14,
+        "description": "Grup d'investigació de la University of Warsaw"
+    },
+    {
+        "name": "Grup O",
+        "grup_id": 15,
+        "universitat_id": 15,
+        "description": "Grup d'estudiants de la University of Copenhagen"
+    }
+]

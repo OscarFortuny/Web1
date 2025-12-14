@@ -1,4 +1,4 @@
-export interface University {
+export interface Universitat {
     name: String,
     universitat_id: number,
     country: String,

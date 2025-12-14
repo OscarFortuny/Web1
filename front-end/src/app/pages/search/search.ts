@@ -1,36 +1,21 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SearchUniversitats } from './search-universitats/search-universitats';
+import { SearchUsuaris } from './search-usuaris/search-usuaris';
+import { SearchGrups } from './search-grups/search-grups';
 
 @Component({
   selector: 'app-search',
-  imports: [CommonModule],
+  imports: [CommonModule, SearchUniversitats, SearchUsuaris, SearchGrups],
   templateUrl: './search.html',
   styleUrl: './search.css',
 })
+
+
 export class Search {
-  busqueda = signal('');
+  activeTab = signal<'universitats' | 'usuaris' | 'grups'>('universitats');
 
-  onSearch() {
-    console.log('Searching for:', this.busqueda());
-    // Aquí puedes agregar la lógica para realizar la búsqueda
+  selectTab(tab: 'universitats' | 'usuaris' | 'grups') {
+    this.activeTab.set(tab);
   }
-
-  listaPruebas = [
-    'Universitat Rovira i Virgili',
-    'Universitat de Barcelona',
-    'Universitat Autònoma de Barcelona',
-    'Universitat Politècnica de Catalunya',
-    'Universitat Pompeu Fabra',
-    'Universitat de Girona',
-    'Universitat de Lleida',
-    'Universitat de Tarragona',
-  ];
-
-  listaFiltrada() {
-    const termino = this.busqueda().toLowerCase();
-    return this.listaPruebas.filter(universidad =>
-      universidad.toLowerCase().includes(termino)
-    );
-  }
-
 }

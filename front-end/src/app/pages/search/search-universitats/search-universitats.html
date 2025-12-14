@@ -1,0 +1,47 @@
+<div class="filters-section">
+  <div class="search-box">
+    <input
+      class="search-input"
+      placeholder="Ej: Universitat Rovira i Virgili"
+      type="text"
+      (input)="busqueda.set($event.target.value); onSearch()"
+    />
+    <span class="search-icon">🔎</span>
+  </div>
+
+  <div class="country-filter">
+    <select
+      class="country-select"
+      (change)="onCountryChange($event)"
+    >
+      <option value="">🌍 Todos los países</option>
+      <option *ngFor="let pais of getPaises()" [value]="pais">
+        {{ pais }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="results-section" *ngIf="listaFiltrada().length > 0; else noResults">
+  <h2 class="results-title">Resultados encontrados ({{ listaFiltrada().length }})</h2>
+  <div class="resultados">
+    <div *ngFor="let universidad of listaFiltrada(); let i = index" class="universidad-item" [style.animation-delay]="i * 0.05 + 's'">
+      <div class="universidad-number">{{ i + 1 }}</div>
+      <div class="universidad-info">
+        <div class="universidad-name">{{ universidad.name }}</div>
+        <div class="universidad-country">📍 {{ universidad.country }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noResults>
+  <div class="no-results" *ngIf="busqueda() !== ''">
+    <p class="no-results-icon">😔</p>
+    <p class="no-results-text">No se encontraron universidades para "{{ busqueda() }}"</p>
+  </div>
+  <div class="initial-state" *ngIf="busqueda() === ''">
+    <p class="initial-icon">🎓</p>
+    <p class="initial-text">Comienza a escribir para buscar universidades</p>
+  </div>
+</ng-template>

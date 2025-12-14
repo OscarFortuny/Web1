@@ -1,37 +1,38 @@
 <div class="search-container">
   <div class="search-header">
-    <h1 class="search-title">🔍 Buscar Universidades</h1>
-    <p class="search-subtitle">Encuentra la universidad que buscas</p>
+    <h1 class="search-title">🔍 Buscar</h1>
+    <p class="search-subtitle">Encuentra lo que buscas en ErasFlatFinder</p>
   </div>
 
-  <div class="search-box">
-    <input
-      class="search-input"
-      placeholder="Ej: Universitat Rovira i Virgili"
-      type="text"
-      (input)="busqueda.set($event.target.value); onSearch()"
-    />
-    <span class="search-icon">🔎</span>
+  <!-- Tabs Navigation -->
+  <div class="tabs-navigation">
+    <button
+      class="tab-button"
+      [class.active]="activeTab() === 'universitats'"
+      (click)="selectTab('universitats')"
+    >
+      🏫 Universidades
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="activeTab() === 'usuaris'"
+      (click)="selectTab('usuaris')"
+    >
+      👥 Usuarios
+    </button>
+    <button
+      class="tab-button"
+      [class.active]="activeTab() === 'grups'"
+      (click)="selectTab('grups')"
+    >
+      👨‍👩‍👧‍👦 Grupos
+    </button>
   </div>
 
-  <div class="results-section" *ngIf="listaFiltrada().length > 0; else noResults">
-    <h2 class="results-title">Resultados encontrados ({{ listaFiltrada().length }})</h2>
-    <div class="resultados">
-      <div *ngFor="let universidad of listaFiltrada(); let i = index" class="universidad-item" [style.animation-delay]="i * 0.05 + 's'">
-        <div class="universidad-number">{{ i + 1 }}</div>
-        <div class="universidad-name">{{ universidad }}</div>
-      </div>
-    </div>
+  <!-- Content Section -->
+  <div class="tabs-content">
+    <app-search-universitats *ngIf="activeTab() === 'universitats'"></app-search-universitats>
+    <app-search-usuaris *ngIf="activeTab() === 'usuaris'"></app-search-usuaris>
+    <app-search-grups *ngIf="activeTab() === 'grups'"></app-search-grups>
   </div>
-
-  <ng-template #noResults>
-    <div class="no-results" *ngIf="busqueda() !== ''">
-      <p class="no-results-icon">😔</p>
-      <p class="no-results-text">No se encontraron universidades para "{{ busqueda() }}"</p>
-    </div>
-    <div class="initial-state" *ngIf="busqueda() === ''">
-      <p class="initial-icon">🎓</p>
-      <p class="initial-text">Comienza a escribir para buscar universidades</p>
-    </div>
-  </ng-template>
 </div>

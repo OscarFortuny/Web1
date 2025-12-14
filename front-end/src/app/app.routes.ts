@@ -5,6 +5,7 @@ import { About } from './pages/about/about';
 import { Profile } from './pages/profile/profile';
 import { Result } from './pages/result/result';
 import { Search } from './pages/search/search';
+import { CreateGroup } from './pages/create-group/create-group';
 
 export const routes: Routes = [
   {path: '', component: Home },
@@ -13,5 +14,6 @@ export const routes: Routes = [
   {path:'profile', component: Profile },
   {path:'result',component: Result},
   {path:'search',component: Search},
+  {path:'create-group',component: CreateGroup},
   {path:'**', redirectTo: '' }
 ];
