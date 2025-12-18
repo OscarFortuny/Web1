@@ -3,105 +3,105 @@
         "name": "Grup A - Barcelona",
         "grup_id": 1,
         "universitat_id": 1,
-        "description": "Grupo de estudiantes ERASMUS en Universitat de Barcelona",
+        "description": "Grup d'estudiants internacionals. Grup amistós i obert a tothom.",
         "usuaris": [9, 16]
     },
     {
         "name": "Grup B - Milano",
         "grup_id": 2,
         "universitat_id": 2,
-        "description": "Comunidad de estudiantes en Politecnico di Milano",
+        "description": "Busquem companys de pis tranquils i responsables. Ambient d'estudi i convivència.",
         "usuaris": [7, 17]
     },
     {
         "name": "Grup C - París",
         "grup_id": 3,
         "universitat_id": 3,
-        "description": "Grupo de aprendizaje de idiomas y cultura en Sorbonne Université",
+        "description": "Pis compartit al centre de París. Busquem gent sociable i ordenada.",
         "usuaris": [4, 18]
     },
     {
         "name": "Grup D - Oxford",
         "grup_id": 4,
         "universitat_id": 4,
-        "description": "Comunidad académica en University of Oxford",
+        "description": "Grup d'estudiants que busquen habitació prop del campus. Ambient acadèmic i respectuós.",
         "usuaris": [1, 19]
     },
     {
         "name": "Grup E - Múnich",
         "grup_id": 5,
         "universitat_id": 5,
-        "description": "Grupo de estudiantes de ingeniería en TUM",
+        "description": "Compartim pis a prop de la TUM. Busquem companys nets i puntuals amb el lloguer.",
         "usuaris": [10, 20]
     },
     {
         "name": "Grup F - Viena",
         "grup_id": 6,
         "universitat_id": 6,
-        "description": "Comunidad de música y artes en University of Vienna",
+        "description": "Pis acollidor a Viena. Ideal per a estudiants que els agradi la música i l'art.",
         "usuaris": [8, 21]
     },
     {
         "name": "Grup G - Lisboa",
         "grup_id": 7,
         "universitat_id": 7,
-        "description": "Grupo de estudiantes portugueses en University of Lisbon",
+        "description": "Grup de convivència a Lisboa. Busquem estudiants alegres i col·laboradors.",
         "usuaris": [11, 22]
     },
     {
         "name": "Grup H - Varsovia",
         "grup_id": 8,
         "universitat_id": 8,
-        "description": "Comunidad de economía y negocios en Varsovia",
+        "description": "Pis econòmic a Varsòvia. Perfecte per a estudiants amb pressupost ajustat.",
         "usuaris": [12, 23]
     },
     {
         "name": "Grup I - Praga",
         "grup_id": 9,
         "universitat_id": 9,
-        "description": "Grupo multidisciplinario en Praga",
+        "description": "Busquem companys de pis a Praga. Grup divers i multicultural.",
         "usuaris": [2, 24]
     },
     {
         "name": "Grup J - Budapest",
         "grup_id": 10,
         "universitat_id": 10,
-        "description": "Comunidad de estudiantes en Budapest",
+        "description": "Compartim apartament cèntric a Budapest. Ambient jove i dinàmic.",
         "usuaris": [5, 25]
     },
     {
         "name": "Grup K - Estocolmo",
         "grup_id": 11,
         "universitat_id": 11,
-        "description": "Grupo de ciencias biológicas en Lund University",
+        "description": "Pis compartit a Estocolm. Busquem gent respectuosa amb el medi ambient.",
         "usuaris": [13, 26]
     },
     {
         "name": "Grup L - Róterdam",
         "grup_id": 12,
         "universitat_id": 12,
-        "description": "Comunidad de desarrollo sostenible en Róterdam",
+        "description": "Grup sostenible a Ròterdam. Ens agrada reciclar i cuidar el planeta.",
         "usuaris": [3, 27]
     },
     {
         "name": "Grup M - Atenas",
         "grup_id": 13,
         "universitat_id": 13,
-        "description": "Grupo de emprendimiento e innovación en Atenas",
+        "description": "Pis assolellat a Atenes. Ideal per a estudiants emprenedors i creatius.",
         "usuaris": [14, 28]
     },
     {
         "name": "Grup N - Helsinki",
         "grup_id": 14,
         "universitat_id": 14,
-        "description": "Comunidad de artes y cine en Helsinki",
+        "description": "Compartim pis a Hèlsinki. Ambient tranquil per estudiar i descansar.",
         "usuaris": [6, 29]
     },
     {
         "name": "Grup O - Dublín",
         "grup_id": 15,
         "universitat_id": 15,
-        "description": "Grupo de cooperación internacional en Dublín",
+        "description": "Grup internacional a Dublín. Busquem companys oberts i amb ganes de fer amics.",
         "usuaris": [15, 30]
     }
 ]
