@@ -6,6 +6,7 @@ import { Result } from './pages/result/result';
 import { Search } from './pages/search/search';
 import { CreateGroup } from './pages/create-group/create-group';
 import { Login } from './pages/login/login';
+import { Chat } from './pages/chat/chat';
 
 export const routes: Routes = [
   {path: '', component: Home },
@@ -15,5 +16,6 @@ export const routes: Routes = [
   {path:'search',component: Search},
   {path:'create-group',component: CreateGroup},
   {path:'login',component: Login},
+  {path:'chat',component: Chat},
   {path:'**', redirectTo: '' }
 ];

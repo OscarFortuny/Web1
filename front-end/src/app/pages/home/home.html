@@ -1,6 +1,12 @@
 <div class="home-container">
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-video-background">
+      <video autoplay muted loop playsinline>
+        <source src="Video_de_chico_estudiando_en_biblioteca.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
     <div class="hero-content">
       <h1>🏠 ErasFlatFinder</h1>
       <p class="tagline">Troba companys de pis per a la teva experiència Erasmus</p>
@@ -10,15 +16,6 @@
         <a routerLink="/search" class="btn-primary">🔍 Explorar Grups</a>
         <a routerLink="/login" class="btn-secondary" *ngIf="!authService.isLoggedIn()">Iniciar Sessió</a>
         <a routerLink="/profile" class="btn-secondary" *ngIf="authService.isLoggedIn()">El meu Perfil</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <div class="floating-cards">
-        <div class="float-card card-1">🇪🇸</div>
-        <div class="float-card card-2">🇮🇹</div>
-        <div class="float-card card-3">🇫🇷</div>
-        <div class="float-card card-4">🇩🇪</div>
-        <div class="float-card card-5">🇵🇹</div>
       </div>
     </div>
   </section>

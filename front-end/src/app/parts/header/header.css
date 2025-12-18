@@ -90,6 +90,26 @@ nav a.login-btn:hover {
     background-color: rgba(255, 100, 100, 0.4) !important;
 }
 
+.chat-link {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    animation: pulse-chat 2s infinite;
+}
+
+.chat-link:hover {
+    animation: none;
+    background: rgba(255, 255, 255, 0.35) !important;
+}
+
+@keyframes pulse-chat {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 1rem;

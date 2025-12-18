@@ -1,0 +1,96 @@
+<div class="chat-container">
+  <!-- Header del xat -->
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <a routerLink="/profile" class="back-button">←</a>
+      <div class="group-avatar">👥</div>
+      <div class="group-info">
+        <h2>{{ grup()?.name }}</h2>
+        <p class="group-members">{{ grup()?.usuaris?.length || 0 }} membres</p>
+      </div>
+    </div>
+    <div class="chat-header-actions">
+      <a routerLink="/profile" class="header-btn" title="Veure grup">👁️</a>
+    </div>
+  </div>
+
+  <!-- Zona de missatges -->
+  <div class="messages-area" #messagesContainer>
+    <!-- Loading -->
+    <div class="loading-messages" *ngIf="isLoading()">
+      <div class="loading-spinner"></div>
+      <p>Carregant missatges...</p>
+    </div>
+
+    <!-- Error -->
+    <div class="error-message" *ngIf="error()">
+      <p>❌ {{ error() }}</p>
+    </div>
+
+    <!-- Missatges buits -->
+    <div class="empty-messages" *ngIf="!isLoading() && missatges().length === 0">
+      <div class="empty-icon">💬</div>
+      <h3>Encara no hi ha missatges</h3>
+      <p>Sigues el primer en dir hola!</p>
+    </div>
+
+    <!-- Llista de missatges -->
+    <div class="messages-list" *ngIf="!isLoading() && missatges().length > 0">
+      <ng-container *ngFor="let missatge of missatges(); let i = index">
+        <!-- Separador de data -->
+        <div class="date-separator" *ngIf="shouldShowDateSeparator(i)">
+          <span>{{ formatDate(missatge.timestamp) }}</span>
+        </div>
+
+        <!-- Missatge -->
+        <div
+          class="message-wrapper"
+          [class.own-message]="isOwnMessage(missatge)"
+          [class.other-message]="!isOwnMessage(missatge)">
+
+          <!-- Avatar (només per missatges d'altres) -->
+          <div class="message-avatar" *ngIf="!isOwnMessage(missatge)">
+            {{ getInitials(missatge.usuari_name) }}
+          </div>
+
+          <div class="message-bubble">
+            <!-- Nom de l'usuari (només per missatges d'altres) -->
+            <div class="message-sender" *ngIf="!isOwnMessage(missatge)">
+              {{ missatge.usuari_name }}
+            </div>
+
+            <div class="message-content">
+              {{ missatge.text }}
+            </div>
+
+            <div class="message-time">
+              {{ formatTime(missatge.timestamp) }}
+              <span class="message-status" *ngIf="isOwnMessage(missatge)">✓</span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Barra d'entrada de missatges -->
+  <div class="message-input-area">
+    <div class="input-container">
+      <input
+        type="text"
+        class="message-input"
+        [(ngModel)]="newMessage"
+        (keypress)="onKeyPress($event)"
+        placeholder="Escriu un missatge..."
+        [disabled]="isSending()"
+      />
+      <button
+        class="send-button"
+        (click)="sendMessage()"
+        [disabled]="!newMessage.trim() || isSending()">
+        <span *ngIf="!isSending()">📤</span>
+        <span *ngIf="isSending()" class="sending-spinner"></span>
+      </button>
+    </div>
+  </div>
+</div>
