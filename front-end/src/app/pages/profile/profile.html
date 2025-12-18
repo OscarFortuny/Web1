@@ -1,1 +1,90 @@
-<p>profile works!</p>
+<div class="profile-container">
+  <div class="profile-card" *ngIf="user() && !isLoading()">
+    <div class="profile-header">
+      <div class="avatar">
+        {{ user()?.name?.charAt(0)?.toUpperCase() }}
+      </div>
+      <h1>{{ user()?.name }}</h1>
+      <p class="username">&#64;{{ user()?.username }}</p>
+    </div>
+
+    <div class="profile-info">
+      <h2>📋 Información Personal</h2>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">👤 Nombre</span>
+          <span class="value">{{ user()?.name }}</span>
+        </div>
+
+        <div class="info-item">
+          <span class="label">🆔 Usuario</span>
+          <span class="value">{{ user()?.username }}</span>
+        </div>
+
+        <div class="info-item">
+          <span class="label">⚧ Género</span>
+          <span class="value">{{ user()?.genere || 'No especificado' }}</span>
+        </div>
+
+        <div class="info-item">
+          <span class="label">🌐 Idioma</span>
+          <span class="value">{{ user()?.language || 'No especificado' }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-universities">
+      <h2>🎓 Universidades</h2>
+
+      <div class="university-cards">
+        <div class="university-card origin">
+          <div class="university-icon">🏠</div>
+          <h3>Universidad de Origen</h3>
+          <p>{{ getUniversitatName(user()?.local_university) }}</p>
+        </div>
+
+        <div class="university-card destination">
+          <div class="university-icon">✈️</div>
+          <h3>Universidad de Destino</h3>
+          <p>{{ getUniversitatName(user()?.destination_university) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-group">
+      <h2>👥 Mi Grupo</h2>
+
+      <div class="group-card" *ngIf="grup()">
+        <div class="group-header">
+          <h3>{{ grup()?.name }}</h3>
+          <span class="members-badge">{{ grup()?.usuaris?.length || 0 }} miembros</span>
+        </div>
+        <p class="group-university">🏫 {{ getUniversitatName(grup()?.universitat_id) }}</p>
+        <p class="group-description" *ngIf="grup()?.description">{{ grup()?.description }}</p>
+
+        <button
+          class="btn-leave-group"
+          (click)="leaveGroup()"
+          [disabled]="isLeavingGroup()">
+          {{ isLeavingGroup() ? '⏳ Saliendo...' : '🚪 Salir del grupo' }}
+        </button>
+      </div>
+
+      <div class="no-group" *ngIf="!grup()">
+        <p>😕 Aún no perteneces a ningún grupo</p>
+        <a routerLink="/search" class="btn-join">Buscar grupos disponibles</a>
+      </div>
+    </div>
+
+    <div class="profile-actions">
+      <button class="btn-logout" (click)="logout()">
+        🚪 Cerrar Sesión
+      </button>
+    </div>
+  </div>
+
+  <div class="loading" *ngIf="isLoading()">
+    <p>Cargando perfil...</p>
+  </div>
+</div>

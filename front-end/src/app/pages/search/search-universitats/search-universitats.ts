@@ -13,6 +13,7 @@ export class SearchUniversitats {
   busqueda = signal('');
   paisSeleccionado = signal('');
   llistaUniversitats = signal<Universitat[]>([]);
+  selectedUniversitat = signal<Universitat | null>(null);
 
   constructor(private universitatsService: UniversitatsService) {
     this.universitatsService.getUniversitats().subscribe(data => {
@@ -43,5 +44,13 @@ export class SearchUniversitats {
       const coincidePais = !pais || universitat.country === pais;
       return coincideName && coincidePais;
     });
+  }
+
+  selectUniversitat(universitat: Universitat) {
+    this.selectedUniversitat.set(universitat);
+  }
+
+  closeModal() {
+    this.selectedUniversitat.set(null);
   }
 }

@@ -1,0 +1,279 @@
+.profile-container {
+    min-height: calc(100vh - 200px);
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+}
+
+.profile-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(167, 139, 250, 0.15);
+    overflow: hidden;
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #a78bfa 0%, #9370db 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    color: #a78bfa;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+
+.username {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.profile-info,
+.profile-universities,
+.profile-group,
+.profile-actions {
+    padding: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-actions {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item .label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.info-item .value {
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.university-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.university-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.university-card.origin {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.university-card.destination {
+    background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+}
+
+.university-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.university-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.university-card p {
+    color: #374151;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.group-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #86efac;
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.group-header h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.members-badge {
+    background: #22c55e;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.group-university {
+    color: #16a34a;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.group-description {
+    color: #6b7280;
+    margin: 0.75rem 0 0 0;
+    font-style: italic;
+    padding-top: 0.75rem;
+    border-top: 1px dashed #86efac;
+}
+
+.btn-leave-group {
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-leave-group:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+}
+
+.btn-leave-group:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.no-group {
+    text-align: center;
+    padding: 2rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 2px dashed #e5e7eb;
+}
+
+.no-group p {
+    color: #6b7280;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.btn-join {
+    display: inline-block;
+    background: linear-gradient(135deg, #a78bfa 0%, #9370db 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(167, 139, 250, 0.4);
+}
+
+.profile-actions {
+    text-align: center;
+}
+
+.btn-logout {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    color: #a78bfa;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 1rem;
+    }
+
+    .profile-header {
+        padding: 2rem 1rem;
+    }
+
+    .info-grid,
+    .university-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .group-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}

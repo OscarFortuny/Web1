@@ -65,3 +65,8 @@ export async function getDBGrupsByUniversitat(universitatId) {
     const grups = await GrupsMongooseModel.find({ universitat_id: universitatId }).lean();
     return grups;
 }
+
+export async function getNextGrupId() {
+    const lastGrup = await GrupsMongooseModel.findOne().sort({ grup_id: -1 });
+    return lastGrup ? lastGrup.grup_id + 1 : 1;
+}

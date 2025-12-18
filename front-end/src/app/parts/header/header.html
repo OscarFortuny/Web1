@@ -3,10 +3,16 @@
   <nav>
     <a routerLink="/">Home</a>
     <a routerLink="/search">Search</a>
-    <a routerLink="/create-group">Crea tu grupo</a>
+    <a routerLink="/create-group" *ngIf="!authService.currentUser()?.grup_id">Crea tu grupo</a>
     <a routerLink="/about">About</a>
-    <a routerLink="/contact">Contact</a>
-    <a routerLink="/profile">Profile</a>
+    <a routerLink="/profile" *ngIf="authService.isLoggedIn()">Profile</a>
+
+    <!-- Login/Logout -->
+    <a routerLink="/login" *ngIf="!authService.isLoggedIn()" class="login-btn">Login</a>
+    <div class="user-menu" *ngIf="authService.isLoggedIn()">
+      <span class="user-name">👤 {{ authService.currentUser()?.name }}</span>
+      <a (click)="logout()" class="logout-btn">Cerrar sesión</a>
+    </div>
   </nav>
 
 </header>

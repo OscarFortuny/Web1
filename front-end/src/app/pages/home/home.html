@@ -1,26 +1,83 @@
 <div class="home-container">
-  <header class="hero">
-    <h1>ErasFlatFinder</h1>
-    <p class="tagline">Encuentra compañeros de piso para tu experiencia Erasmus</p>
-  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>🏠 ErasFlatFinder</h1>
+      <p class="tagline">Encuentra compañeros de piso para tu experiencia Erasmus</p>
+      <p class="subtitle">Conecta con estudiantes de toda Europa que comparten tu destino universitario</p>
 
-  <section class="features">
-    <div class="feature-card">
-      <h2>🏠 Busca tu Piso</h2>
-      <p>Explora anuncios de pisos compartidos en tu ciudad</p>
+      <div class="hero-buttons">
+        <a routerLink="/search" class="btn-primary">🔍 Explorar Grupos</a>
+        <a routerLink="/login" class="btn-secondary" *ngIf="!authService.isLoggedIn()">Iniciar Sesión</a>
+        <a routerLink="/profile" class="btn-secondary" *ngIf="authService.isLoggedIn()">Mi Perfil</a>
+      </div>
     </div>
-    <div class="feature-card">
-      <h2>👥 Conoce Compañeros</h2>
-      <p>Conecta con otros estudiantes que buscan compartir piso</p>
-    </div>
-    <div class="feature-card">
-      <h2>💬 Comunícate</h2>
-      <p>Chatea directamente con posibles compañeros de piso</p>
+    <div class="hero-image">
+      <div class="floating-cards">
+        <div class="float-card card-1">🇪🇸</div>
+        <div class="float-card card-2">🇮🇹</div>
+        <div class="float-card card-3">🇫🇷</div>
+        <div class="float-card card-4">🇩🇪</div>
+        <div class="float-card card-5">🇵🇹</div>
+      </div>
     </div>
   </section>
 
+  <!-- Features Section -->
+  <section class="features">
+    <h2 class="section-title">¿Cómo funciona?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3>1. Regístrate</h3>
+        <p>Crea tu perfil con tu universidad de origen y destino Erasmus</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>2. Busca Grupos</h3>
+        <p>Explora grupos de estudiantes que van a tu misma universidad</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3>3. Únete o Crea</h3>
+        <p>Únete a un grupo existente o crea el tuyo propio</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <h3>4. Encuentra Piso</h3>
+        <p>Coordina con tu grupo para encontrar el piso perfecto</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat-item">
+      <span class="stat-number">100+</span>
+      <span class="stat-label">Universidades</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">15+</span>
+      <span class="stat-label">Grupos Activos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">30+</span>
+      <span class="stat-label">Estudiantes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">20+</span>
+      <span class="stat-label">Países</span>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
   <section class="cta">
-    <h2>¿Listo para encontrar tu piso perfecto?</h2>
-    <button class="btn-primary">Empezar Ahora</button>
+    <h2>¿Listo para tu aventura Erasmus?</h2>
+    <p>Únete a la comunidad de estudiantes que ya han encontrado su grupo perfecto</p>
+    <div class="cta-buttons">
+      <a routerLink="/create-group" class="btn-cta" *ngIf="authService.isLoggedIn() && !userHasGroup()">✨ Crear mi Grupo</a>
+      <a routerLink="/profile" class="btn-cta" *ngIf="authService.isLoggedIn() && userHasGroup()">👥 Ver mi Grupo</a>
+      <a routerLink="/login" class="btn-cta" *ngIf="!authService.isLoggedIn()">🚀 Empezar Ahora</a>
+    </div>
   </section>
 </div>

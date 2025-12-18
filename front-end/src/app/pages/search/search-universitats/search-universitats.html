@@ -25,12 +25,17 @@
 <div class="results-section" *ngIf="listaFiltrada().length > 0; else noResults">
   <h2 class="results-title">Resultados encontrados ({{ listaFiltrada().length }})</h2>
   <div class="resultados">
-    <div *ngFor="let universidad of listaFiltrada(); let i = index" class="universidad-item" [style.animation-delay]="i * 0.05 + 's'">
+    <div
+      *ngFor="let universidad of listaFiltrada(); let i = index"
+      class="universidad-item clickable"
+      [style.animation-delay]="i * 0.05 + 's'"
+      (click)="selectUniversitat(universidad)">
       <div class="universidad-number">{{ i + 1 }}</div>
       <div class="universidad-info">
         <div class="universidad-name">{{ universidad.name }}</div>
         <div class="universidad-country">📍 {{ universidad.country }}</div>
       </div>
+      <div class="view-details">👁️</div>
     </div>
   </div>
 </div>
@@ -45,3 +50,31 @@
     <p class="initial-text">Comienza a escribir para buscar universidades</p>
   </div>
 </ng-template>
+
+<!-- Modal de detalles -->
+<div class="modal-overlay" *ngIf="selectedUniversitat()" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="modal-close" (click)="closeModal()">✕</button>
+    <div class="modal-header">
+      <h2>🏫 {{ selectedUniversitat()?.name }}</h2>
+    </div>
+    <div class="modal-body">
+      <div class="detail-item">
+        <span class="detail-label">📍 País:</span>
+        <span class="detail-value">{{ selectedUniversitat()?.country }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">🏙️ Ciudad:</span>
+        <span class="detail-value">{{ selectedUniversitat()?.city }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">📧 Email:</span>
+        <span class="detail-value">{{ selectedUniversitat()?.email }}</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">🆔 ID:</span>
+        <span class="detail-value">{{ selectedUniversitat()?.universitat_id }}</span>
+      </div>
+    </div>
+  </div>
+</div>

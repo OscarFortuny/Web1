@@ -35,7 +35,27 @@ export async function getDBUsuariById(id) {
 	return usuari;
 }
 
+export async function getDBUsuariByUsername(username) {
+	const usuari = await UsuariMongooseModel.findOne({
+		username: username
+	});
+	return usuari;
+}
+
+export async function getNextUsuariId() {
+	const lastUsuari = await UsuariMongooseModel.findOne().sort({ usuari_id: -1 });
+	return lastUsuari ? lastUsuari.usuari_id + 1 : 1;
+}
+
 export function addDBUsuari(usuari) {
 	const newUsuari = new UsuariMongooseModel(usuari);
 	return newUsuari.save();
+}
+
+export function updateDBUsuari(usuariId, updates) {
+	return UsuariMongooseModel.findOneAndUpdate(
+		{ usuari_id: usuariId },
+		updates,
+		{ new: true }
+	);
 }

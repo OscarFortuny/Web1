@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
+  constructor(public authService: AuthService) {}
 
+  logout() {
+    this.authService.logout();
+  }
 }

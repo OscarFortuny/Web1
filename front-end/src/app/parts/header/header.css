@@ -53,6 +53,43 @@ nav a:active {
     transform: translateY(0);
 }
 
+nav a.login-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #9370db;
+    font-weight: 600;
+    border: 2px solid white;
+}
+
+nav a.login-btn:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-name {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+
+.logout-btn {
+    cursor: pointer;
+    background-color: rgba(255, 100, 100, 0.2) !important;
+    border-color: rgba(255, 100, 100, 0.5) !important;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 100, 100, 0.4) !important;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 1rem;
@@ -66,5 +103,10 @@ nav a:active {
     nav a {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
+    }
+
+    .user-menu {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

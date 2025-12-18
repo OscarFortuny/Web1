@@ -4,14 +4,17 @@
       type="text"
       class="search-input"
       placeholder="🔎 Buscar usuario por nombre o usuario..."
-      [(ngModel)]="busqueda"
-      (input)="onSearch()"
+      [value]="busqueda()"
+      (input)="busqueda.set($any($event.target).value)"
     />
   </div>
 
   <div class="results-section" *ngIf="llistaUsuaris().length > 0">
     <div class="usuarios-grid">
-      <div class="usuario-card" *ngFor="let usuario of listaFiltrada(); let i = index">
+      <div
+        class="usuario-card clickable"
+        *ngFor="let usuario of listaFiltrada(); let i = index"
+        (click)="selectUser(usuario)">
         <div class="usuario-number">{{ i + 1 }}</div>
         <div class="usuario-info">
           <h3>{{ usuario.name }}</h3>
@@ -20,6 +23,7 @@
           <p class="usuario-detail">✈️ {{ getUniversitatName(usuario.destination_university) }}</p>
           <p class="usuario-detail">🌐 {{ usuario.language }}</p>
         </div>
+        <div class="view-details">👁️</div>
       </div>
     </div>
   </div>
@@ -30,5 +34,82 @@
 
   <div class="loading" *ngIf="llistaUsuaris().length === 0">
     <p>Cargando usuarios...</p>
+  </div>
+</div>
+
+<!-- Modal de detalles del usuario -->
+<div class="modal-overlay" *ngIf="selectedUser()" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="modal-close" (click)="closeModal()">✕</button>
+
+    <div class="modal-header">
+      <div class="user-avatar">{{ selectedUser()?.name?.charAt(0)?.toUpperCase() }}</div>
+      <h2>{{ selectedUser()?.name }}</h2>
+      <p class="user-username">@{{ selectedUser()?.username }}</p>
+    </div>
+
+    <div class="modal-body">
+      <div class="detail-section">
+        <h3>📋 Información Personal</h3>
+        <div class="detail-item">
+          <span class="detail-label">⚧ Género:</span>
+          <span class="detail-value">{{ selectedUser()?.genere || 'No especificado' }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">🌐 Idioma:</span>
+          <span class="detail-value">{{ selectedUser()?.language || 'No especificado' }}</span>
+        </div>
+      </div>
+
+      <div class="detail-section">
+        <h3>🎓 Universidades</h3>
+        <div class="detail-item">
+          <span class="detail-label">🏠 Origen:</span>
+          <span class="detail-value">{{ getUniversitatName(selectedUser()?.local_university) }}</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">✈️ Destino:</span>
+          <span class="detail-value">{{ getUniversitatName(selectedUser()?.destination_university) }}</span>
+        </div>
+      </div>
+
+      <div class="detail-section" *ngIf="selectedUserGroup()">
+        <h3>👥 Grupo</h3>
+        <div class="group-card">
+          <h4>{{ selectedUserGroup()?.name }}</h4>
+          <p class="group-university">🏫 {{ getUniversitatName(selectedUserGroup()?.universitat_id) }}</p>
+          <p class="group-members">👥 {{ selectedUserGroup()?.usuaris?.length || 0 }}/4 miembros</p>
+          <p class="group-description" *ngIf="selectedUserGroup()?.description">{{ selectedUserGroup()?.description }}</p>
+
+          <div class="join-section" *ngIf="authService.isLoggedIn()">
+            <div class="success-message" *ngIf="joinSuccess()">✅ {{ joinSuccess() }}</div>
+            <div class="error-message" *ngIf="joinError()">❌ {{ joinError() }}</div>
+
+            <button
+              class="btn-join"
+              *ngIf="canJoinGroup() && !joinSuccess()"
+              (click)="joinGroup()"
+              [disabled]="isJoining()">
+              {{ isJoining() ? '⏳ Uniéndose...' : '🤝 Unirse al grupo' }}
+            </button>
+
+            <p class="join-info" *ngIf="!canJoinGroup() && !joinSuccess() && authService.currentUser()?.grup_id">
+              ⚠️ Ya perteneces a un grupo
+            </p>
+            <p class="join-info" *ngIf="!canJoinGroup() && !joinSuccess() && !authService.currentUser()?.grup_id && selectedUserGroup() && selectedUserGroup()!.usuaris.length >= 4">
+              ⚠️ El grupo está lleno
+            </p>
+            <p class="join-info" *ngIf="!canJoinGroup() && !joinSuccess() && !authService.currentUser()?.grup_id && selectedUserGroup() && selectedUserGroup()!.usuaris.length < 4">
+              ⚠️ Tu universidad de destino no coincide con la del grupo
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-section no-group" *ngIf="!selectedUserGroup()">
+        <h3>👥 Grupo</h3>
+        <p>Este usuario no pertenece a ningún grupo</p>
+      </div>
+    </div>
   </div>
 </div>

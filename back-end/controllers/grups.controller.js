@@ -1,5 +1,5 @@
-import { getAllDBGrups, getDBGrupById, addDBGrup, updateDBGrup, deleteDBGrup, getDBGrupsByUniversitat } from '../models/grups.model.js';
-import { getDBUsuariById } from '../models/usuaris.model.js';
+import { getAllDBGrups, getDBGrupById, addDBGrup, updateDBGrup, deleteDBGrup, getDBGrupsByUniversitat, getNextGrupId } from '../models/grups.model.js';
+import { getDBUsuariById, updateDBUsuari } from '../models/usuaris.model.js';
 
 const MAX_MEMBERS = 4;
 
@@ -40,28 +40,34 @@ export async function addGrup(req, res) {
         const newGrup = req.body;
         const creadorId = newGrup.creador_id;
 
-        if (!newGrup.name || !newGrup.grup_id || !newGrup.universitat_id) {
-            return res.status(400).json({ error: 'Missing required grup fields: name, grup_id, universitat_id' });
+        if (!newGrup.name || !newGrup.universitat_id) {
+            return res.status(400).json({ error: 'Missing required grup fields: name, universitat_id' });
         }
 
         if (!creadorId) {
             return res.status(400).json({ error: 'Missing creador_id (creator user ID)' });
         }
 
-        const grupExists = await getDBGrupById(newGrup.grup_id);
-        if (grupExists) {
-            return res.status(409).json({ error: 'Group with this grup_id already exists' });
-        }
+        // Obtener próximo grup_id automáticamente
+        const nextGrupId = await getNextGrupId();
 
         const grupConCreador = {
-            ...newGrup,
+            name: newGrup.name,
+            grup_id: nextGrupId,
+            universitat_id: newGrup.universitat_id,
+            description: newGrup.description || '',
             usuaris: [creadorId]
         };
 
         const addedGrup = await addDBGrup(grupConCreador);
-        res.status(201).json(addedGrup);
+        
+        // Actualizar el grup_id del usuario creador
+        await updateDBUsuari(creadorId, { grup_id: nextGrupId });
+        
+        res.status(201).json({ success: true, grup: addedGrup });
     } catch (error) {
-        res.status(500).json({ error: 'Error creating group' });
+        console.error('Error creating group:', error);
+        res.status(500).json({ success: false, error: 'Error creating group' });
     }
 }
 
@@ -120,5 +126,107 @@ export async function deleteGrup(req, res) {
         res.json({ message: 'Group deleted successfully' });
     } catch (error) {
         res.status(500).json({ error: 'Error deleting group' });
+    }
+}
+
+export async function leaveGrup(req, res) {
+    try {
+        const grupId = parseInt(req.params.id);
+        const { usuari_id } = req.body;
+
+        if (!usuari_id) {
+            return res.status(400).json({ error: 'Missing usuari_id in request body' });
+        }
+
+        const grup = await getDBGrupById(grupId);
+        if (!grup) {
+            return res.status(404).json({ error: 'Group not found' });
+        }
+
+        // Verificar que el usuario está en el grupo (comparar como strings)
+        const usuariIdStr = usuari_id.toString();
+        const isInGroup = grup.usuaris.some(id => id.toString() === usuariIdStr);
+        if (!isInGroup) {
+            return res.status(400).json({ error: 'User is not a member of this group' });
+        }
+
+        // Remover usuario del array (comparar como strings)
+        const updatedUsuaris = grup.usuaris.filter(id => id.toString() !== usuariIdStr);
+
+        // Si el grupo queda vacío, eliminarlo
+        if (updatedUsuaris.length === 0) {
+            await deleteDBGrup(grupId);
+            // Actualizar el grup_id del usuario a null
+            await updateDBUsuari(usuari_id, { grup_id: null });
+            return res.json({ success: true, message: 'You left the group. Group was deleted as it had no remaining members.' });
+        }
+
+        // Actualizar el grupo con la nueva lista de usuarios
+        await updateDBGrup(grupId, { usuaris: updatedUsuaris });
+        
+        // Actualizar el grup_id del usuario a null
+        await updateDBUsuari(usuari_id, { grup_id: null });
+
+        res.json({ success: true, message: 'You have left the group successfully' });
+    } catch (error) {
+        console.error('Error leaving group:', error);
+        res.status(500).json({ success: false, error: 'Error leaving group' });
+    }
+}
+
+export async function joinGrup(req, res) {
+    try {
+        const grupId = parseInt(req.params.id);
+        const { usuari_id } = req.body;
+
+        if (!usuari_id) {
+            return res.status(400).json({ error: 'Missing usuari_id in request body' });
+        }
+
+        const grup = await getDBGrupById(grupId);
+        if (!grup) {
+            return res.status(404).json({ error: 'Group not found' });
+        }
+
+        // Verificar que el usuario no está ya en el grupo
+        const usuariIdStr = usuari_id.toString();
+        const isInGroup = grup.usuaris.some(id => id.toString() === usuariIdStr);
+        if (isInGroup) {
+            return res.status(400).json({ error: 'User is already a member of this group' });
+        }
+
+        // Verificar que el grupo no está lleno
+        if (grup.usuaris.length >= MAX_MEMBERS) {
+            return res.status(400).json({ error: `Group is full. Maximum ${MAX_MEMBERS} members allowed.` });
+        }
+
+        // Verificar que el usuario existe y tiene la misma universidad de destino
+        const usuario = await getDBUsuariById(usuari_id);
+        if (!usuario) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        if (usuario.destination_university?.toString() !== grup.universitat_id?.toString()) {
+            return res.status(400).json({ 
+                error: 'Cannot join this group. Your destination university does not match the group university.' 
+            });
+        }
+
+        // Verificar que el usuario no pertenece ya a otro grupo
+        if (usuario.grup_id) {
+            return res.status(400).json({ error: 'You already belong to a group. Leave your current group first.' });
+        }
+
+        // Añadir usuario al grupo
+        const updatedUsuaris = [...grup.usuaris, usuari_id];
+        await updateDBGrup(grupId, { usuaris: updatedUsuaris });
+
+        // Actualizar el grup_id del usuario
+        await updateDBUsuari(usuari_id, { grup_id: grupId });
+
+        res.json({ success: true, message: 'You have joined the group successfully', grup_id: grupId });
+    } catch (error) {
+        console.error('Error joining group:', error);
+        res.status(500).json({ success: false, error: 'Error joining group' });
     }
 }
