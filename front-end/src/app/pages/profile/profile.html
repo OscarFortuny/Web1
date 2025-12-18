@@ -9,82 +9,99 @@
     </div>
 
     <div class="profile-info">
-      <h2>📋 Información Personal</h2>
+      <h2>📋 Informació Personal</h2>
 
       <div class="info-grid">
         <div class="info-item">
-          <span class="label">👤 Nombre</span>
+          <span class="label">👤 Nom</span>
           <span class="value">{{ user()?.name }}</span>
         </div>
 
         <div class="info-item">
-          <span class="label">🆔 Usuario</span>
+          <span class="label">🆔 Usuari</span>
           <span class="value">{{ user()?.username }}</span>
         </div>
 
         <div class="info-item">
-          <span class="label">⚧ Género</span>
-          <span class="value">{{ user()?.genere || 'No especificado' }}</span>
+          <span class="label">⚧ Gènere</span>
+          <span class="value">{{ user()?.genere || 'No especificat' }}</span>
         </div>
 
         <div class="info-item">
           <span class="label">🌐 Idioma</span>
-          <span class="value">{{ user()?.language || 'No especificado' }}</span>
+          <span class="value">{{ user()?.language || 'No especificat' }}</span>
         </div>
       </div>
     </div>
 
     <div class="profile-universities">
-      <h2>🎓 Universidades</h2>
+      <h2>🎓 Universitats</h2>
 
       <div class="university-cards">
         <div class="university-card origin">
           <div class="university-icon">🏠</div>
-          <h3>Universidad de Origen</h3>
+          <h3>Universitat d'Origen</h3>
           <p>{{ getUniversitatName(user()?.local_university) }}</p>
         </div>
 
         <div class="university-card destination">
           <div class="university-icon">✈️</div>
-          <h3>Universidad de Destino</h3>
+          <h3>Universitat de Destí</h3>
           <p>{{ getUniversitatName(user()?.destination_university) }}</p>
         </div>
       </div>
     </div>
 
     <div class="profile-group">
-      <h2>👥 Mi Grupo</h2>
+      <h2>👥 El meu Grup</h2>
 
       <div class="group-card" *ngIf="grup()">
         <div class="group-header">
           <h3>{{ grup()?.name }}</h3>
-          <span class="members-badge">{{ grup()?.usuaris?.length || 0 }} miembros</span>
+          <span class="members-badge">{{ grup()?.usuaris?.length || 0 }}/4 membres</span>
         </div>
         <p class="group-university">🏫 {{ getUniversitatName(grup()?.universitat_id) }}</p>
         <p class="group-description" *ngIf="grup()?.description">{{ grup()?.description }}</p>
+
+        <div class="group-members-section">
+          <h4>🧑‍🤝‍🧑 Membres del grup</h4>
+          <div class="members-list">
+            <div class="member-item" *ngFor="let member of groupMembers()">
+              <div class="member-avatar">{{ member.name.charAt(0).toUpperCase() }}</div>
+              <div class="member-info">
+                <span class="member-name">{{ member.name }}</span>
+                <span class="member-username">@{{ member.username }}</span>
+                <span class="member-you" *ngIf="member.usuari_id === user()?.usuari_id">(Tu)</span>
+              </div>
+              <div class="member-details">
+                <span class="member-language">🌐 {{ member.language }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <button
           class="btn-leave-group"
           (click)="leaveGroup()"
           [disabled]="isLeavingGroup()">
-          {{ isLeavingGroup() ? '⏳ Saliendo...' : '🚪 Salir del grupo' }}
+          {{ isLeavingGroup() ? '⏳ Sortint...' : '🚪 Sortir del grup' }}
         </button>
       </div>
 
       <div class="no-group" *ngIf="!grup()">
-        <p>😕 Aún no perteneces a ningún grupo</p>
-        <a routerLink="/search" class="btn-join">Buscar grupos disponibles</a>
+        <p>😕 Encara no pertanys a cap grup</p>
+        <a routerLink="/search" class="btn-join">Cercar grups disponibles</a>
       </div>
     </div>
 
     <div class="profile-actions">
       <button class="btn-logout" (click)="logout()">
-        🚪 Cerrar Sesión
+        🚪 Tancar Sessió
       </button>
     </div>
   </div>
 
   <div class="loading" *ngIf="isLoading()">
-    <p>Cargando perfil...</p>
+    <p>Carregant perfil...</p>
   </div>
 </div>

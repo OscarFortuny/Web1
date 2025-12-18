@@ -57,18 +57,18 @@ export class CreateGroup {
     this.successMessage.set('');
 
     if (!this.groupName.trim()) {
-      this.errorMessage.set('El nombre del grupo es obligatorio');
+      this.errorMessage.set('El nom del grup és obligatori');
       return;
     }
 
     const user = this.authService.currentUser();
     if (!user) {
-      this.errorMessage.set('Debes iniciar sesión para crear un grupo');
+      this.errorMessage.set('Has d\'iniciar sessió per crear un grup');
       return;
     }
 
     if (!user.destination_university) {
-      this.errorMessage.set('No tienes una universidad de destino configurada');
+      this.errorMessage.set('No tens una universitat de destí configurada');
       return;
     }
 
@@ -87,17 +87,17 @@ export class CreateGroup {
           const updatedUser = { ...user, grup_id: response.grup.grup_id };
           this.authService.updateCurrentUser(updatedUser);
 
-          this.successMessage.set('¡Grupo creado exitosamente!');
+          this.successMessage.set('Grup creat amb èxit!');
           setTimeout(() => {
             this.router.navigate(['/profile']);
           }, 1500);
         } else {
-          this.errorMessage.set(response.error || 'Error al crear el grupo');
+          this.errorMessage.set(response.error || 'Error en crear el grup');
         }
       },
       error: (error) => {
         this.isLoading.set(false);
-        this.errorMessage.set(error.error?.error || 'Error al crear el grupo');
+        this.errorMessage.set(error.error?.error || 'Error en crear el grup');
       }
     });
   }

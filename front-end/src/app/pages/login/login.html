@@ -1,8 +1,8 @@
 <div class="login-container">
   <div class="login-card">
     <div class="login-header">
-      <h1>{{ isLoginMode() ? '🔐 Iniciar Sesión' : '📝 Registrarse' }}</h1>
-      <p>{{ isLoginMode() ? 'Accede a tu cuenta de ErasFlatFinder' : 'Crea tu cuenta en ErasFlatFinder' }}</p>
+      <h1>{{ isLoginMode() ? '🔐 Iniciar Sessió' : '📝 Registrar-se' }}</h1>
+      <p>{{ isLoginMode() ? 'Accedeix al teu compte d\'ErasFlatFinder' : 'Crea el teu compte a ErasFlatFinder' }}</p>
     </div>
 
     <!-- Error/Success Messages -->
@@ -16,29 +16,29 @@
     <!-- Login Form -->
     <form *ngIf="isLoginMode()" (ngSubmit)="onLogin()" class="login-form">
       <div class="form-group">
-        <label for="username">Usuario</label>
+        <label for="username">Usuari</label>
         <input
           type="text"
           id="username"
           [(ngModel)]="loginUsername"
           name="username"
-          placeholder="Tu nombre de usuario"
+          placeholder="El teu nom d'usuari"
         />
       </div>
 
       <div class="form-group">
-        <label for="password">Contraseña</label>
+        <label for="password">Contrasenya</label>
         <input
           type="password"
           id="password"
           [(ngModel)]="loginPassword"
           name="password"
-          placeholder="Tu contraseña"
+          placeholder="La teva contrasenya"
         />
       </div>
 
       <button type="submit" class="btn-primary" [disabled]="isLoading()">
-        {{ isLoading() ? 'Cargando...' : 'Iniciar Sesión' }}
+        {{ isLoading() ? 'Carregant...' : 'Iniciar Sessió' }}
       </button>
     </form>
 
@@ -46,70 +46,70 @@
     <form *ngIf="!isLoginMode()" (ngSubmit)="onRegister()" class="login-form">
       <div class="form-row">
         <div class="form-group">
-          <label for="reg-username">Usuario *</label>
+          <label for="reg-username">Usuari *</label>
           <input
             type="text"
             id="reg-username"
             [(ngModel)]="registerUsername"
             name="username"
-            placeholder="Elige un usuario"
+            placeholder="Tria un usuari"
           />
         </div>
 
         <div class="form-group">
-          <label for="reg-name">Nombre completo *</label>
+          <label for="reg-name">Nom complet *</label>
           <input
             type="text"
             id="reg-name"
             [(ngModel)]="registerName"
             name="name"
-            placeholder="Tu nombre"
+            placeholder="El teu nom"
           />
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="reg-password">Contraseña *</label>
+          <label for="reg-password">Contrasenya *</label>
           <input
             type="password"
             id="reg-password"
             [(ngModel)]="registerPassword"
             name="password"
-            placeholder="Mínimo 4 caracteres"
+            placeholder="Mínim 4 caràcters"
           />
         </div>
 
         <div class="form-group">
-          <label for="reg-confirm">Confirmar contraseña *</label>
+          <label for="reg-confirm">Confirmar contrasenya *</label>
           <input
             type="password"
             id="reg-confirm"
             [(ngModel)]="registerConfirmPassword"
             name="confirmPassword"
-            placeholder="Repite la contraseña"
+            placeholder="Repeteix la contrasenya"
           />
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="reg-genere">Género *</label>
+          <label for="reg-genere">Gènere *</label>
           <select id="reg-genere" [(ngModel)]="registerGenere" name="genere">
             <option value="">Selecciona...</option>
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-            <option value="Otro">Otro</option>
-            <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+            <option value="Masculí">Masculí</option>
+            <option value="Femení">Femení</option>
+            <option value="Altre">Altre</option>
+            <option value="Prefereixo no dir-ho">Prefereixo no dir-ho</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label for="reg-language">Idioma preferido *</label>
+          <label for="reg-language">Idioma preferit *</label>
           <select id="reg-language" [(ngModel)]="registerLanguage" name="language">
             <option value="">Selecciona...</option>
-            <option value="Español">Español</option>
             <option value="Català">Català</option>
+            <option value="Español">Español</option>
             <option value="English">English</option>
             <option value="Français">Français</option>
             <option value="Deutsch">Deutsch</option>
@@ -120,9 +120,9 @@
       </div>
 
       <div class="form-group">
-        <label for="reg-local">Universidad de origen *</label>
+        <label for="reg-local">Universitat d'origen *</label>
         <select id="reg-local" [(ngModel)]="registerLocalUniversity" name="localUniversity">
-          <option value="">Selecciona tu universidad...</option>
+          <option value="">Selecciona la teva universitat...</option>
           <option *ngFor="let uni of universitats()" [value]="uni.universitat_id">
             {{ uni.name }}
           </option>
@@ -130,9 +130,9 @@
       </div>
 
       <div class="form-group">
-        <label for="reg-destination">Universidad de destino *</label>
+        <label for="reg-destination">Universitat de destí *</label>
         <select id="reg-destination" [(ngModel)]="registerDestinationUniversity" name="destinationUniversity">
-          <option value="">Selecciona tu destino ERASMUS...</option>
+          <option value="">Selecciona el teu destí ERASMUS...</option>
           <option *ngFor="let uni of universitats()" [value]="uni.universitat_id">
             {{ uni.name }}
           </option>
@@ -140,18 +140,18 @@
       </div>
 
       <button type="submit" class="btn-primary" [disabled]="isLoading()">
-        {{ isLoading() ? 'Creando cuenta...' : 'Registrarse' }}
+        {{ isLoading() ? 'Creant compte...' : 'Registrar-se' }}
       </button>
     </form>
 
     <div class="toggle-mode">
       <p *ngIf="isLoginMode()">
-        ¿No tienes cuenta?
-        <a (click)="toggleMode()">Regístrate aquí</a>
+        No tens compte?
+        <a (click)="toggleMode()">Registra't aquí</a>
       </p>
       <p *ngIf="!isLoginMode()">
-        ¿Ya tienes cuenta?
-        <a (click)="toggleMode()">Inicia sesión</a>
+        Ja tens compte?
+        <a (click)="toggleMode()">Inicia sessió</a>
       </p>
     </div>
   </div>

@@ -4,8 +4,10 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService, User } from '../../services/auth.service';
 import { UniversitatsService } from '../../services/universitats-service';
 import { Grups } from '../../services/grups';
+import { Usuaris } from '../../services/usuaris';
 import { Universitat } from '../../models/Universitat';
 import { Grup } from '../../models/Grup';
+import { User as Usuari } from '../../models/User';
 
 @Component({
   selector: 'app-profile',
@@ -16,6 +18,7 @@ import { Grup } from '../../models/Grup';
 export class Profile {
   user = signal<User | null>(null);
   grup = signal<Grup | null>(null);
+  groupMembers = signal<Usuari[]>([]);
   universidadesMap = signal<Map<string, string>>(new Map());
   isLoading = signal(true);
   isLeavingGroup = signal(false);
@@ -24,6 +27,7 @@ export class Profile {
     private authService: AuthService,
     private universitatsService: UniversitatsService,
     private grupsService: Grups,
+    private usuarisService: Usuaris,
     private router: Router
   ) {
     this.loadUserData();
@@ -58,14 +62,36 @@ export class Profile {
       this.grupsService.getGrupById(currentUser.grup_id).subscribe({
         next: (grup: Grup) => {
           this.grup.set(grup);
+          this.loadGroupMembers(grup.usuaris);
         },
         error: () => {
           this.grup.set(null);
+          this.groupMembers.set([]);
         }
       });
     } else {
       this.grup.set(null);
+      this.groupMembers.set([]);
     }
+  }
+
+  loadGroupMembers(userIds: string[]) {
+    if (!userIds || userIds.length === 0) {
+      this.groupMembers.set([]);
+      return;
+    }
+
+    this.usuarisService.getUsuaris().subscribe({
+      next: (usuaris: Usuari[]) => {
+        const members = usuaris.filter(u =>
+          userIds.includes(u.usuari_id.toString())
+        );
+        this.groupMembers.set(members);
+      },
+      error: () => {
+        this.groupMembers.set([]);
+      }
+    });
   }
 
   getUniversitatName(id: string | number | undefined): string {
@@ -80,7 +106,7 @@ export class Profile {
 
     if (!currentUser || !currentGrup) return;
 
-    if (!confirm('¿Estás seguro de que quieres salir del grupo? Si eres el último miembro, el grupo se eliminará.')) {
+    if (!confirm('Estàs segur que vols sortir del grup? Si ets l\'\u00faltim membre, el grup s\'eliminarà.')) {
       return;
     }
 
@@ -100,7 +126,7 @@ export class Profile {
       },
       error: (error) => {
         console.error('Error leaving group:', error);
-        alert('Error al salir del grupo. Por favor, inténtalo de nuevo.');
+        alert('Error en sortir del grup. Si us plau, torna-ho a intentar.');
         this.isLeavingGroup.set(false);
       }
     });

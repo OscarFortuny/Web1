@@ -3,13 +3,13 @@
   <section class="hero">
     <div class="hero-content">
       <h1>🏠 ErasFlatFinder</h1>
-      <p class="tagline">Encuentra compañeros de piso para tu experiencia Erasmus</p>
-      <p class="subtitle">Conecta con estudiantes de toda Europa que comparten tu destino universitario</p>
+      <p class="tagline">Troba companys de pis per a la teva experiència Erasmus</p>
+      <p class="subtitle">Connecta amb estudiants de tota Europa que comparteixen la teva destinació universitària</p>
 
       <div class="hero-buttons">
-        <a routerLink="/search" class="btn-primary">🔍 Explorar Grupos</a>
-        <a routerLink="/login" class="btn-secondary" *ngIf="!authService.isLoggedIn()">Iniciar Sesión</a>
-        <a routerLink="/profile" class="btn-secondary" *ngIf="authService.isLoggedIn()">Mi Perfil</a>
+        <a routerLink="/search" class="btn-primary">🔍 Explorar Grups</a>
+        <a routerLink="/login" class="btn-secondary" *ngIf="!authService.isLoggedIn()">Iniciar Sessió</a>
+        <a routerLink="/profile" class="btn-secondary" *ngIf="authService.isLoggedIn()">El meu Perfil</a>
       </div>
     </div>
     <div class="hero-image">
@@ -25,27 +25,27 @@
 
   <!-- Features Section -->
   <section class="features">
-    <h2 class="section-title">¿Cómo funciona?</h2>
+    <h2 class="section-title">Com funciona?</h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🎓</div>
-        <h3>1. Regístrate</h3>
-        <p>Crea tu perfil con tu universidad de origen y destino Erasmus</p>
+        <h3>1. Registra't</h3>
+        <p>Crea el teu perfil amb la teva universitat d'origen i destí Erasmus</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔍</div>
-        <h3>2. Busca Grupos</h3>
-        <p>Explora grupos de estudiantes que van a tu misma universidad</p>
+        <h3>2. Cerca Grups</h3>
+        <p>Explora grups d'estudiants que van a la teva mateixa universitat</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">👥</div>
-        <h3>3. Únete o Crea</h3>
-        <p>Únete a un grupo existente o crea el tuyo propio</p>
+        <h3>3. Uneix-te o Crea</h3>
+        <p>Uneix-te a un grup existent o crea el teu propi</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🏠</div>
-        <h3>4. Encuentra Piso</h3>
-        <p>Coordina con tu grupo para encontrar el piso perfecto</p>
+        <h3>4. Troba Pis</h3>
+        <p>Coordina amb el teu grup per trobar el pis perfecte</p>
       </div>
     </div>
   </section>
@@ -54,30 +54,30 @@
   <section class="stats">
     <div class="stat-item">
       <span class="stat-number">100+</span>
-      <span class="stat-label">Universidades</span>
+      <span class="stat-label">Universitats</span>
     </div>
     <div class="stat-item">
       <span class="stat-number">15+</span>
-      <span class="stat-label">Grupos Activos</span>
+      <span class="stat-label">Grups Actius</span>
     </div>
     <div class="stat-item">
       <span class="stat-number">30+</span>
-      <span class="stat-label">Estudiantes</span>
+      <span class="stat-label">Estudiants</span>
     </div>
     <div class="stat-item">
       <span class="stat-number">20+</span>
-      <span class="stat-label">Países</span>
+      <span class="stat-label">Països</span>
     </div>
   </section>
 
   <!-- CTA Section -->
   <section class="cta">
-    <h2>¿Listo para tu aventura Erasmus?</h2>
-    <p>Únete a la comunidad de estudiantes que ya han encontrado su grupo perfecto</p>
+    <h2>Preparat per a la teva aventura Erasmus?</h2>
+    <p>Uneix-te a la comunitat d'estudiants que ja han trobat el seu grup perfecte</p>
     <div class="cta-buttons">
-      <a routerLink="/create-group" class="btn-cta" *ngIf="authService.isLoggedIn() && !userHasGroup()">✨ Crear mi Grupo</a>
-      <a routerLink="/profile" class="btn-cta" *ngIf="authService.isLoggedIn() && userHasGroup()">👥 Ver mi Grupo</a>
-      <a routerLink="/login" class="btn-cta" *ngIf="!authService.isLoggedIn()">🚀 Empezar Ahora</a>
+      <a routerLink="/create-group" class="btn-cta" *ngIf="authService.isLoggedIn() && !userHasGroup()">✨ Crear el meu Grup</a>
+      <a routerLink="/profile" class="btn-cta" *ngIf="authService.isLoggedIn() && userHasGroup()">👥 Veure el meu Grup</a>
+      <a routerLink="/login" class="btn-cta" *ngIf="!authService.isLoggedIn()">🚀 Començar Ara</a>
     </div>
   </section>
 </div>

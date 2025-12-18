@@ -142,7 +142,7 @@ export class SearchGrups {
       next: (response) => {
         this.isJoining.set(false);
         if (response.success) {
-          this.joinSuccess.set('¡Te has unido al grupo correctamente!');
+          this.joinSuccess.set('T\'has unit al grup correctament!');
           // Actualizar usuario local
           const updatedUser = { ...currentUser, grup_id: group.grup_id };
           this.authService.updateCurrentUser(updatedUser);
@@ -160,12 +160,12 @@ export class SearchGrups {
           const updatedGrups = grups.map(g => g.grup_id === group.grup_id ? updatedGroup : g);
           this.llistaGrups.set(updatedGrups);
         } else {
-          this.joinError.set(response.error || 'Error al unirse al grupo');
+          this.joinError.set(response.error || 'Error en unir-se al grup');
         }
       },
       error: (error) => {
         this.isJoining.set(false);
-        this.joinError.set(error.error?.error || 'Error al unirse al grupo');
+        this.joinError.set(error.error?.error || 'Error en unir-se al grup');
       }
     });
   }

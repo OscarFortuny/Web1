@@ -3,7 +3,7 @@
     <input
       type="text"
       class="search-input"
-      placeholder="🔎 Buscar grupo por nombre..."
+      placeholder="🔎 Cercar grup per nom..."
       [value]="busqueda()"
       (input)="busqueda.set($any($event.target).value)"
     />
@@ -14,7 +14,7 @@
       class="universitat-select"
       (change)="onUniversidadChange($event)"
     >
-      <option value="">🏫 Todas las universidades</option>
+      <option value="">🏫 Totes les universitats</option>
       <option *ngFor="let uni of getUniversitats()" [value]="uni.universitat_id">
         {{ uni.name }}
       </option>
@@ -23,7 +23,7 @@
 </div>
 
 <div class="results-section" *ngIf="listaFiltrada().length > 0">
-  <h2 class="results-title">Grupos encontrados ({{ listaFiltrada().length }})</h2>
+  <h2 class="results-title">Grups trobats ({{ listaFiltrada().length }})</h2>
   <div class="grups-grid">
     <div
       class="grup-card clickable"
@@ -34,7 +34,7 @@
         <h3>{{ grup.name }}</h3>
         <p class="grup-id">ID: {{ grup.grup_id }}</p>
         <p class="grup-university">🏫 {{ getUniversitatName(grup.universitat_id) }}</p>
-        <p class="grup-members">👥 {{ grup.usuaris.length }}/4 miembros</p>
+        <p class="grup-members">👥 {{ grup.usuaris.length }}/4 membres</p>
         <p class="grup-description" *ngIf="grup.description">{{ grup.description }}</p>
       </div>
       <div class="view-details">👁️</div>
@@ -43,14 +43,14 @@
 </div>
 
 <div class="no-results" *ngIf="llistaGrups().length > 0 && listaFiltrada().length === 0">
-  <p>No se encontraron grupos que coincidan con los filtros</p>
+  <p>No s'han trobat grups que coincideixin amb els filtres</p>
 </div>
 
 <div class="loading" *ngIf="llistaGrups().length === 0">
-  <p>Cargando grupos...</p>
+  <p>Carregant grups...</p>
 </div>
 
-<!-- Modal de detalles del grupo -->
+<!-- Modal de detalls del grup -->
 <div class="modal-overlay" *ngIf="selectedGroup()" (click)="closeModal()">
   <div class="modal-content" (click)="$event.stopPropagation()">
     <button class="modal-close" (click)="closeModal()">✕</button>
@@ -62,23 +62,23 @@
 
     <div class="modal-body">
       <div class="detail-section">
-        <h3>📋 Información del Grupo</h3>
+        <h3>📋 Informació del Grup</h3>
         <div class="detail-item">
           <span class="detail-label">🆔 ID:</span>
           <span class="detail-value">{{ selectedGroup()?.grup_id }}</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">👥 Miembros:</span>
+          <span class="detail-label">👥 Membres:</span>
           <span class="detail-value">{{ selectedGroup()?.usuaris?.length || 0 }}/4</span>
         </div>
         <div class="detail-item" *ngIf="selectedGroup()?.description">
-          <span class="detail-label">📝 Descripción:</span>
+          <span class="detail-label">📝 Descripció:</span>
           <span class="detail-value description">{{ selectedGroup()?.description }}</span>
         </div>
       </div>
 
       <div class="detail-section members-section">
-        <h3>🧑‍🤝‍🧑 Miembros del Grupo</h3>
+        <h3>🧑‍🤝‍🧑 Membres del Grup</h3>
         <div class="members-list">
           <div class="member-item" *ngFor="let member of groupMembers()">
             <div class="member-avatar">{{ member.name.charAt(0).toUpperCase() }}</div>
@@ -88,7 +88,7 @@
             </div>
           </div>
           <div class="no-members" *ngIf="groupMembers().length === 0">
-            <p>No se pudieron cargar los miembros</p>
+            <p>No s'han pogut carregar els membres</p>
           </div>
         </div>
       </div>
@@ -102,22 +102,22 @@
           *ngIf="canJoinGroup() && !joinSuccess()"
           (click)="joinGroup()"
           [disabled]="isJoining()">
-          {{ isJoining() ? '⏳ Uniéndose...' : '🤝 Unirse al grupo' }}
+          {{ isJoining() ? '⏳ Unint-se...' : '🤝 Unir-se al grup' }}
         </button>
 
         <p class="join-info" *ngIf="!canJoinGroup() && !joinSuccess() && authService.currentUser()?.grup_id">
-          ⚠️ Ya perteneces a un grupo
+          ⚠️ Ja pertanys a un grup
         </p>
         <p class="join-info" *ngIf="!canJoinGroup() && !joinSuccess() && !authService.currentUser()?.grup_id && (selectedGroup()?.usuaris?.length || 0) >= 4">
-          ⚠️ El grupo está lleno
+          ⚠️ El grup està ple
         </p>
         <p class="join-info" *ngIf="!canJoinGroup() && !joinSuccess() && !authService.currentUser()?.grup_id && (selectedGroup()?.usuaris?.length || 0) < 4">
-          ⚠️ Tu universidad de destino no coincide con la del grupo
+          ⚠️ La teva universitat de destí no coincideix amb la del grup
         </p>
       </div>
 
       <div class="login-prompt" *ngIf="!authService.isLoggedIn()">
-        <p>🔐 Inicia sesión para unirte a este grupo</p>
+        <p>🔐 Inicia sessió per unir-te a aquest grup</p>
       </div>
     </div>
   </div>

@@ -54,7 +54,7 @@ export class Login {
     this.errorMessage.set('');
 
     if (!this.loginUsername || !this.loginPassword) {
-      this.errorMessage.set('Por favor, completa todos los campos');
+      this.errorMessage.set('Si us plau, completa tots els camps');
       return;
     }
 
@@ -65,7 +65,7 @@ export class Login {
       if (response.success) {
         this.router.navigate(['/']);
       } else {
-        this.errorMessage.set(response.message || 'Error al iniciar sesión');
+        this.errorMessage.set(response.message || 'Error en iniciar sessió');
       }
     });
   }
@@ -76,17 +76,17 @@ export class Login {
     if (!this.registerUsername || !this.registerPassword || !this.registerName ||
         !this.registerGenere || !this.registerLanguage ||
         !this.registerDestinationUniversity || !this.registerLocalUniversity) {
-      this.errorMessage.set('Por favor, completa todos los campos');
+      this.errorMessage.set('Si us plau, completa tots els camps');
       return;
     }
 
     if (this.registerPassword !== this.registerConfirmPassword) {
-      this.errorMessage.set('Las contraseñas no coinciden');
+      this.errorMessage.set('Les contrasenyes no coincideixen');
       return;
     }
 
     if (this.registerPassword.length < 4) {
-      this.errorMessage.set('La contraseña debe tener al menos 4 caracteres');
+      this.errorMessage.set('La contrasenya ha de tenir almenys 4 caràcters');
       return;
     }
 
@@ -105,7 +105,7 @@ export class Login {
       if (response.success) {
         this.router.navigate(['/']);
       } else {
-        this.errorMessage.set(response.message || 'Error al registrarse');
+        this.errorMessage.set(response.message || 'Error en registrar-se');
       }
     });
   }

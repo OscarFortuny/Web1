@@ -2,7 +2,7 @@
   <div class="search-box">
     <input
       class="search-input"
-      placeholder="Ej: Universitat Rovira i Virgili"
+      placeholder="Ex: Universitat Rovira i Virgili"
       type="text"
       (input)="busqueda.set($event.target.value); onSearch()"
     />
@@ -14,7 +14,7 @@
       class="country-select"
       (change)="onCountryChange($event)"
     >
-      <option value="">🌍 Todos los países</option>
+      <option value="">🌍 Tots els països</option>
       <option *ngFor="let pais of getPaises()" [value]="pais">
         {{ pais }}
       </option>
@@ -23,7 +23,7 @@
 </div>
 
 <div class="results-section" *ngIf="listaFiltrada().length > 0; else noResults">
-  <h2 class="results-title">Resultados encontrados ({{ listaFiltrada().length }})</h2>
+  <h2 class="results-title">Resultats trobats ({{ listaFiltrada().length }})</h2>
   <div class="resultados">
     <div
       *ngFor="let universidad of listaFiltrada(); let i = index"
@@ -43,15 +43,15 @@
 <ng-template #noResults>
   <div class="no-results" *ngIf="busqueda() !== ''">
     <p class="no-results-icon">😔</p>
-    <p class="no-results-text">No se encontraron universidades para "{{ busqueda() }}"</p>
+    <p class="no-results-text">No s'han trobat universitats per a "{{ busqueda() }}"</p>
   </div>
   <div class="initial-state" *ngIf="busqueda() === ''">
     <p class="initial-icon">🎓</p>
-    <p class="initial-text">Comienza a escribir para buscar universidades</p>
+    <p class="initial-text">Comença a escriure per cercar universitats</p>
   </div>
 </ng-template>
 
-<!-- Modal de detalles -->
+<!-- Modal de detalls -->
 <div class="modal-overlay" *ngIf="selectedUniversitat()" (click)="closeModal()">
   <div class="modal-content" (click)="$event.stopPropagation()">
     <button class="modal-close" (click)="closeModal()">✕</button>
@@ -64,7 +64,7 @@
         <span class="detail-value">{{ selectedUniversitat()?.country }}</span>
       </div>
       <div class="detail-item">
-        <span class="detail-label">🏙️ Ciudad:</span>
+        <span class="detail-label">🏙️ Ciutat:</span>
         <span class="detail-value">{{ selectedUniversitat()?.city }}</span>
       </div>
       <div class="detail-item">

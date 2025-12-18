@@ -1,14 +1,14 @@
 <div class="create-group-container">
   <div class="create-group-card">
     <div class="card-header">
-      <h1>✨ Crear Nuevo Grupo</h1>
-      <p>Crea un grupo para encontrar compañeros de piso en tu universidad de destino</p>
+      <h1>✨ Crear Nou Grup</h1>
+      <p>Crea un grup per trobar companys de pis a la teva universitat de destí</p>
     </div>
 
     <!-- Not logged in -->
     <div class="not-logged" *ngIf="!authService.isLoggedIn()">
-      <p>😕 Debes iniciar sesión para crear un grupo</p>
-      <a routerLink="/login" class="btn-login">Iniciar Sesión</a>
+      <p>😕 Has d'iniciar sessió per crear un grup</p>
+      <a routerLink="/login" class="btn-login">Iniciar Sessió</a>
     </div>
 
     <!-- Create form -->
@@ -23,7 +23,7 @@
 
       <!-- University info -->
       <div class="university-info">
-        <div class="info-label">🏫 Universidad del grupo</div>
+        <div class="info-label">🏫 Universitat del grup</div>
         <div class="university-name" *ngIf="destinationUniversity()">
           {{ destinationUniversity()?.name }}
         </div>
@@ -31,31 +31,31 @@
           📍 {{ destinationUniversity()?.country }}
         </div>
         <p class="info-note">
-          El grupo estará asociado a tu universidad de destino. Solo estudiantes con el mismo destino podrán unirse.
+          El grup estarà associat a la teva universitat de destí. Només estudiants amb el mateix destí podran unir-s'hi.
         </p>
       </div>
 
       <form (ngSubmit)="onSubmit()" class="create-form">
         <div class="form-group">
-          <label for="groupName">Nombre del grupo *</label>
+          <label for="groupName">Nom del grup *</label>
           <input
             type="text"
             id="groupName"
             [(ngModel)]="groupName"
             name="groupName"
-            placeholder="Ej: Erasmus Barcelona 2025"
+            placeholder="Ex: Erasmus Barcelona 2025"
             maxlength="50"
           />
           <span class="char-count">{{ groupName.length }}/50</span>
         </div>
 
         <div class="form-group">
-          <label for="groupDescription">Descripción (opcional)</label>
+          <label for="groupDescription">Descripció (opcional)</label>
           <textarea
             id="groupDescription"
             [(ngModel)]="groupDescription"
             name="groupDescription"
-            placeholder="Describe tu grupo: qué tipo de piso buscáis, zona preferida, presupuesto..."
+            placeholder="Descriu el teu grup: quin tipus de pis busqueu, zona preferida, pressupost..."
             rows="4"
             maxlength="300"
           ></textarea>
@@ -63,21 +63,21 @@
         </div>
 
         <div class="group-rules">
-          <h3>📋 Reglas del grupo</h3>
+          <h3>📋 Regles del grup</h3>
           <ul>
-            <li>👥 Máximo 4 miembros por grupo</li>
-            <li>🎓 Solo estudiantes con el mismo destino pueden unirse</li>
-            <li>👤 Tú serás el primer miembro del grupo</li>
+            <li>👥 Màxim 4 membres per grup</li>
+            <li>🎓 Només estudiants amb el mateix destí poden unir-s'hi</li>
+            <li>👤 Tu seràs el primer membre del grup</li>
           </ul>
         </div>
 
         <button type="submit" class="btn-create" [disabled]="isLoading()">
-          {{ isLoading() ? 'Creando grupo...' : '🚀 Crear Grupo' }}
+          {{ isLoading() ? 'Creant grup...' : '🚀 Crear Grup' }}
         </button>
       </form>
 
       <div class="back-link">
-        <a routerLink="/search">← Volver a búsqueda</a>
+        <a routerLink="/search">← Tornar a cerca</a>
       </div>
     </div>
   </div>
