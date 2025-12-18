@@ -1,1 +1,34 @@
-<p>search-usuaris works!</p>
+<div class="search-usuaris-container">
+  <div class="search-section">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="🔎 Buscar usuario por nombre o usuario..."
+      [(ngModel)]="busqueda"
+      (input)="onSearch()"
+    />
+  </div>
+
+  <div class="results-section" *ngIf="llistaUsuaris().length > 0">
+    <div class="usuarios-grid">
+      <div class="usuario-card" *ngFor="let usuario of listaFiltrada(); let i = index">
+        <div class="usuario-number">{{ i + 1 }}</div>
+        <div class="usuario-info">
+          <h3>{{ usuario.name }}</h3>
+          <p class="usuario-username">@{{ usuario.username }}</p>
+          <p class="usuario-detail">📍 {{ getUniversitatName(usuario.local_university) }}</p>
+          <p class="usuario-detail">✈️ {{ getUniversitatName(usuario.destination_university) }}</p>
+          <p class="usuario-detail">🌐 {{ usuario.language }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-results" *ngIf="llistaUsuaris().length > 0 && listaFiltrada().length === 0">
+    <p>No se encontraron usuarios que coincidan con "{{ busqueda() }}"</p>
+  </div>
+
+  <div class="loading" *ngIf="llistaUsuaris().length === 0">
+    <p>Cargando usuarios...</p>
+  </div>
+</div>

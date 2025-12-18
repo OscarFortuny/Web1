@@ -1,7 +1,7 @@
 export interface Universitat {
-    name: String,
+    name: string,
     universitat_id: number,
-    country: String,
-    city: String,
-    email: String,
+    country: string,
+    city: string,
+    email: string,
 }

@@ -4,5 +4,5 @@ export interface Grup {
     universitat_id: string;
     usuaris: string[];
     createdAt?: Date;
-    _id?: string;
+    description?: string;
 }

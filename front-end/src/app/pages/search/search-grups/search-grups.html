@@ -1,1 +1,47 @@
-<p>search-grups works!</p>
+<div class="filters-section">
+  <div class="search-box">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="🔎 Buscar grupo por nombre..."
+      [(ngModel)]="busqueda"
+      (input)="onSearch()"
+    />
+  </div>
+
+  <div class="universitat-filter">
+    <select
+      class="universitat-select"
+      (change)="onUniversidadChange($event)"
+    >
+      <option value="">🏫 Todas las universidades</option>
+      <option *ngFor="let uni of getUniversitats()" [value]="uni.universitat_id">
+        {{ uni.name }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="results-section" *ngIf="listaFiltrada().length > 0">
+  <h2 class="results-title">Grupos encontrados ({{ listaFiltrada().length }})</h2>
+  <div class="grups-grid">
+    <div class="grup-card" *ngFor="let grup of listaFiltrada(); let i = index">
+      <div class="grup-number">{{ i + 1 }}</div>
+      <div class="grup-info">
+        <h3>{{ grup.name }}</h3>
+        <p class="grup-id">ID: {{ grup.grup_id }}</p>
+        <p class="grup-university">🏫 {{ getUniversitatName(grup.universitat_id) }}</p>
+        <p class="grup-members">👥 {{ grup.usuaris.length }} miembros</p>
+        <p class="grup-description" *ngIf="grup.description">{{ grup.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="no-results" *ngIf="llistaGrups().length > 0 && listaFiltrada().length === 0">
+  <p>No se encontraron grupos que coincidan con los filtros</p>
+</div>
+
+<div class="loading" *ngIf="llistaGrups().length === 0">
+  <p>Cargando grupos...</p>
+</div>

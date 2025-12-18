@@ -23,6 +23,10 @@ const grupsMongooseSchema = new mondodbInstance.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    description: {
+        type: String,
+        default: ''
     }
 });
 
@@ -55,4 +59,9 @@ export function updateDBGrup(id, updates) {
 
 export function deleteDBGrup(id) {
     return GrupsMongooseModel.findOneAndDelete({ grup_id: id });
+}
+
+export async function getDBGrupsByUniversitat(universitatId) {
+    const grups = await GrupsMongooseModel.find({ universitat_id: universitatId }).lean();
+    return grups;
 }

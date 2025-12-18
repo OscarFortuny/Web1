@@ -13,6 +13,11 @@ const usuariMongooseSchema = new mondodbInstance.Schema({
 	language: String,
 	destination_university: String,
 	local_university: String,
+	grup_id: {
+		type: Number,
+		ref: 'Grup',
+		index: true
+	}
 });
 
 

@@ -1,92 +1,107 @@
 [
     {
-        "name": "Grup A",
+        "name": "Grup A - Barcelona",
         "grup_id": 1,
         "universitat_id": 1,
-        "description": "Grup d'estudiants de la Universitat de Barcelona"
+        "description": "Grupo de estudiantes ERASMUS en Universitat de Barcelona",
+        "usuaris": [9, 16]
     },
     {
-        "name": "Grup B",
+        "name": "Grup B - Milano",
         "grup_id": 2,
         "universitat_id": 2,
-        "description": "Grup d'investigació del Politecnico di Milano"
+        "description": "Comunidad de estudiantes en Politecnico di Milano",
+        "usuaris": [7, 17]
     },
     {
-        "name": "Grup C",
+        "name": "Grup C - París",
         "grup_id": 3,
         "universitat_id": 3,
-        "description": "Grup d'alumnes de Sorbonne Université"
+        "description": "Grupo de aprendizaje de idiomas y cultura en Sorbonne Université",
+        "usuaris": [4, 18]
     },
     {
-        "name": "Grup D",
+        "name": "Grup D - Oxford",
         "grup_id": 4,
         "universitat_id": 4,
-        "description": "Grup d'estudiants de la University of Oxford"
+        "description": "Comunidad académica en University of Oxford",
+        "usuaris": [1, 19]
     },
     {
-        "name": "Grup E",
+        "name": "Grup E - Múnich",
         "grup_id": 5,
         "universitat_id": 5,
-        "description": "Grup de recerca de la Technical University of Munich (TUM)"
+        "description": "Grupo de estudiantes de ingeniería en TUM",
+        "usuaris": [10, 20]
     },
     {
-        "name": "Grup F",
+        "name": "Grup F - Viena",
         "grup_id": 6,
         "universitat_id": 6,
-        "description": "Grup d'estudiants de la University of Vienna"
+        "description": "Comunidad de música y artes en University of Vienna",
+        "usuaris": [8, 21]
     },
     {
-        "name": "Grup G",
+        "name": "Grup G - Lisboa",
         "grup_id": 7,
         "universitat_id": 7,
-        "description": "Grup d'alumnes de la University of Lisbon"
+        "description": "Grupo de estudiantes portugueses en University of Lisbon",
+        "usuaris": [11, 22]
     },
     {
-        "name": "Grup H",
+        "name": "Grup H - Varsovia",
         "grup_id": 8,
         "universitat_id": 8,
-        "description": "Grup d'investigació de la Delft University of Technology"
+        "description": "Comunidad de economía y negocios en Varsovia",
+        "usuaris": [12, 23]
     },
     {
-        "name": "Grup I",
+        "name": "Grup I - Praga",
         "grup_id": 9,
         "universitat_id": 9,
-        "description": "Grup d'estudiants de l'ETH Zurich"
+        "description": "Grupo multidisciplinario en Praga",
+        "usuaris": [2, 24]
     },
     {
-        "name": "Grup J",
+        "name": "Grup J - Budapest",
         "grup_id": 10,
         "universitat_id": 10,
-        "description": "Grup d'alumnes de la University of Cambridge"
+        "description": "Comunidad de estudiantes en Budapest",
+        "usuaris": [5, 25]
     },
     {
-        "name": "Grup K",
+        "name": "Grup K - Estocolmo",
         "grup_id": 11,
         "universitat_id": 11,
-        "description": "Grup d'investigació de la University of Edinburgh"
+        "description": "Grupo de ciencias biológicas en Lund University",
+        "usuaris": [13, 26]
     },
     {
-        "name": "Grup L",
+        "name": "Grup L - Róterdam",
         "grup_id": 12,
         "universitat_id": 12,
-        "description": "Grup d'estudiants de la KU Leuven"
+        "description": "Comunidad de desarrollo sostenible en Róterdam",
+        "usuaris": [3, 27]
     },
     {
-        "name": "Grup M",
+        "name": "Grup M - Atenas",
         "grup_id": 13,
         "universitat_id": 13,
-        "description": "Grup d'alumnes de la University of Helsinki"
+        "description": "Grupo de emprendimiento e innovación en Atenas",
+        "usuaris": [14, 28]
     },
     {
-        "name": "Grup N",
+        "name": "Grup N - Helsinki",
         "grup_id": 14,
         "universitat_id": 14,
-        "description": "Grup d'investigació de la University of Warsaw"
+        "description": "Comunidad de artes y cine en Helsinki",
+        "usuaris": [6, 29]
     },
     {
-        "name": "Grup O",
+        "name": "Grup O - Dublín",
         "grup_id": 15,
         "universitat_id": 15,
-        "description": "Grup d'estudiants de la University of Copenhagen"
+        "description": "Grupo de cooperación internacional en Dublín",
+        "usuaris": [15, 30]
     }
 ]

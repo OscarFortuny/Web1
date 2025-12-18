@@ -1,0 +1,122 @@
+.search-usuaris-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-section {
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #a78bfa;
+    box-shadow: 0 4px 20px rgba(167, 139, 250, 0.25);
+    transform: translateY(-2px);
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.results-section {
+    margin-top: 2rem;
+}
+
+.usuarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.usuario-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.usuario-card:hover {
+    border-color: #a78bfa;
+    box-shadow: 0 8px 24px rgba(167, 139, 250, 0.15);
+    transform: translateY(-4px);
+}
+
+.usuario-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a78bfa 0%, #9370db 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.usuario-info {
+    flex: 1;
+}
+
+.usuario-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1f2937;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}
+
+.usuario-username {
+    margin: 0.25rem 0;
+    color: #a78bfa;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.usuario-detail {
+    margin: 0.5rem 0 0 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #a78bfa;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .search-usuaris-container {
+        padding: 1rem;
+    }
+
+    .usuarios-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
