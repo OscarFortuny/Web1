@@ -697,5 +697,1643 @@
         "country": "Belgium",
         "city": "Leuven",
         "email": "kuleuven@mail.be"
+    },
+    {
+        "name": "Universitat Rovira i Virgili",
+        "universitat_id": 101,
+        "country": "Spain",
+        "city": "Tarragona",
+        "email": "urv@mail.cat"
+    },
+    {
+        "name": "Universitat Autònoma de Barcelona",
+        "universitat_id": 102,
+        "country": "Spain",
+        "city": "Barcelona",
+        "email": "uab@mail.cat"
+    },
+    {
+        "name": "Universitat Politècnica de Catalunya",
+        "universitat_id": 103,
+        "country": "Spain",
+        "city": "Barcelona",
+        "email": "upc@mail.cat"
+    },
+    {
+        "name": "Universitat Pompeu Fabra",
+        "universitat_id": 104,
+        "country": "Spain",
+        "city": "Barcelona",
+        "email": "upf@mail.cat"
+    },
+    {
+        "name": "Universitat de Girona",
+        "universitat_id": 105,
+        "country": "Spain",
+        "city": "Girona",
+        "email": "udg@mail.cat"
+    },
+    {
+        "name": "Universitat de Lleida",
+        "universitat_id": 106,
+        "country": "Spain",
+        "city": "Lleida",
+        "email": "udl@mail.cat"
+    },
+    {
+        "name": "Universidad Complutense de Madrid",
+        "universitat_id": 107,
+        "country": "Spain",
+        "city": "Madrid",
+        "email": "ucm@mail.es"
+    },
+    {
+        "name": "Universidad Autónoma de Madrid",
+        "universitat_id": 108,
+        "country": "Spain",
+        "city": "Madrid",
+        "email": "uam@mail.es"
+    },
+    {
+        "name": "Universidad Politécnica de Madrid",
+        "universitat_id": 109,
+        "country": "Spain",
+        "city": "Madrid",
+        "email": "upm@mail.es"
+    },
+    {
+        "name": "Universidad Carlos III de Madrid",
+        "universitat_id": 110,
+        "country": "Spain",
+        "city": "Madrid",
+        "email": "uc3m@mail.es"
+    },
+    {
+        "name": "Universidad de Valencia",
+        "universitat_id": 111,
+        "country": "Spain",
+        "city": "Valencia",
+        "email": "uv@mail.es"
+    },
+    {
+        "name": "Universitat Politècnica de València",
+        "universitat_id": 112,
+        "country": "Spain",
+        "city": "Valencia",
+        "email": "upv@mail.es"
+    },
+    {
+        "name": "Universidad de Sevilla",
+        "universitat_id": 113,
+        "country": "Spain",
+        "city": "Seville",
+        "email": "us@mail.es"
+    },
+    {
+        "name": "Universidad de Granada",
+        "universitat_id": 114,
+        "country": "Spain",
+        "city": "Granada",
+        "email": "ugr@mail.es"
+    },
+    {
+        "name": "Universidad de Salamanca",
+        "universitat_id": 115,
+        "country": "Spain",
+        "city": "Salamanca",
+        "email": "usal@mail.es"
+    },
+    {
+        "name": "Universidad del País Vasco",
+        "universitat_id": 116,
+        "country": "Spain",
+        "city": "Bilbao",
+        "email": "ehu@mail.es"
+    },
+    {
+        "name": "Universidad de Zaragoza",
+        "universitat_id": 117,
+        "country": "Spain",
+        "city": "Zaragoza",
+        "email": "unizar@mail.es"
+    },
+    {
+        "name": "Universidad de Navarra",
+        "universitat_id": 118,
+        "country": "Spain",
+        "city": "Pamplona",
+        "email": "unav@mail.es"
+    },
+    {
+        "name": "Sapienza Università di Roma",
+        "universitat_id": 119,
+        "country": "Italy",
+        "city": "Rome",
+        "email": "uniroma1@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Milano",
+        "universitat_id": 120,
+        "country": "Italy",
+        "city": "Milan",
+        "email": "unimi@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Padova",
+        "universitat_id": 121,
+        "country": "Italy",
+        "city": "Padua",
+        "email": "unipd@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Torino",
+        "universitat_id": 122,
+        "country": "Italy",
+        "city": "Turin",
+        "email": "unito@mail.it"
+    },
+    {
+        "name": "Politecnico di Torino",
+        "universitat_id": 123,
+        "country": "Italy",
+        "city": "Turin",
+        "email": "polito@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Firenze",
+        "universitat_id": 124,
+        "country": "Italy",
+        "city": "Florence",
+        "email": "unifi@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Napoli Federico II",
+        "universitat_id": 125,
+        "country": "Italy",
+        "city": "Naples",
+        "email": "unina@mail.it"
+    },
+    {
+        "name": "Università Ca' Foscari Venezia",
+        "universitat_id": 126,
+        "country": "Italy",
+        "city": "Venice",
+        "email": "unive@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Pisa",
+        "universitat_id": 127,
+        "country": "Italy",
+        "city": "Pisa",
+        "email": "unipi@mail.it"
+    },
+    {
+        "name": "Scuola Normale Superiore di Pisa",
+        "universitat_id": 128,
+        "country": "Italy",
+        "city": "Pisa",
+        "email": "sns@mail.it"
+    },
+    {
+        "name": "Università Commerciale Luigi Bocconi",
+        "universitat_id": 129,
+        "country": "Italy",
+        "city": "Milan",
+        "email": "bocconi@mail.it"
+    },
+    {
+        "name": "Université Paris-Saclay",
+        "universitat_id": 130,
+        "country": "France",
+        "city": "Paris",
+        "email": "upsaclay@mail.fr"
+    },
+    {
+        "name": "Université PSL",
+        "universitat_id": 131,
+        "country": "France",
+        "city": "Paris",
+        "email": "psl@mail.fr"
+    },
+    {
+        "name": "École Polytechnique",
+        "universitat_id": 132,
+        "country": "France",
+        "city": "Palaiseau",
+        "email": "polytechnique@mail.fr"
+    },
+    {
+        "name": "Sciences Po",
+        "universitat_id": 133,
+        "country": "France",
+        "city": "Paris",
+        "email": "sciencespo@mail.fr"
+    },
+    {
+        "name": "HEC Paris",
+        "universitat_id": 134,
+        "country": "France",
+        "city": "Jouy-en-Josas",
+        "email": "hec@mail.fr"
+    },
+    {
+        "name": "Université de Lyon",
+        "universitat_id": 135,
+        "country": "France",
+        "city": "Lyon",
+        "email": "unilyon@mail.fr"
+    },
+    {
+        "name": "Université de Strasbourg",
+        "universitat_id": 136,
+        "country": "France",
+        "city": "Strasbourg",
+        "email": "unistra@mail.fr"
+    },
+    {
+        "name": "Université de Bordeaux",
+        "universitat_id": 137,
+        "country": "France",
+        "city": "Bordeaux",
+        "email": "ubordeaux@mail.fr"
+    },
+    {
+        "name": "Université Grenoble Alpes",
+        "universitat_id": 138,
+        "country": "France",
+        "city": "Grenoble",
+        "email": "uga@mail.fr"
+    },
+    {
+        "name": "Aix-Marseille Université",
+        "universitat_id": 139,
+        "country": "France",
+        "city": "Marseille",
+        "email": "amu@mail.fr"
+    },
+    {
+        "name": "Université de Montpellier",
+        "universitat_id": 140,
+        "country": "France",
+        "city": "Montpellier",
+        "email": "umontpellier@mail.fr"
+    },
+    {
+        "name": "Université de Lille",
+        "universitat_id": 141,
+        "country": "France",
+        "city": "Lille",
+        "email": "univ-lille@mail.fr"
+    },
+    {
+        "name": "Université de Toulouse",
+        "universitat_id": 142,
+        "country": "France",
+        "city": "Toulouse",
+        "email": "ut@mail.fr"
+    },
+    {
+        "name": "Université de Nantes",
+        "universitat_id": 143,
+        "country": "France",
+        "city": "Nantes",
+        "email": "univ-nantes@mail.fr"
+    },
+    {
+        "name": "Ludwig-Maximilians-Universität München",
+        "universitat_id": 144,
+        "country": "Germany",
+        "city": "Munich",
+        "email": "lmu@mail.de"
+    },
+    {
+        "name": "Ruprecht-Karls-Universität Heidelberg",
+        "universitat_id": 145,
+        "country": "Germany",
+        "city": "Heidelberg",
+        "email": "uni-heidelberg@mail.de"
+    },
+    {
+        "name": "Humboldt-Universität zu Berlin",
+        "universitat_id": 146,
+        "country": "Germany",
+        "city": "Berlin",
+        "email": "hu-berlin@mail.de"
+    },
+    {
+        "name": "Freie Universität Berlin",
+        "universitat_id": 147,
+        "country": "Germany",
+        "city": "Berlin",
+        "email": "fu-berlin@mail.de"
+    },
+    {
+        "name": "Technische Universität Berlin",
+        "universitat_id": 148,
+        "country": "Germany",
+        "city": "Berlin",
+        "email": "tu-berlin@mail.de"
+    },
+    {
+        "name": "RWTH Aachen University",
+        "universitat_id": 149,
+        "country": "Germany",
+        "city": "Aachen",
+        "email": "rwth-aachen@mail.de"
+    },
+    {
+        "name": "Albert-Ludwigs-Universität Freiburg",
+        "universitat_id": 150,
+        "country": "Germany",
+        "city": "Freiburg",
+        "email": "uni-freiburg@mail.de"
+    },
+    {
+        "name": "Eberhard Karls Universität Tübingen",
+        "universitat_id": 151,
+        "country": "Germany",
+        "city": "Tübingen",
+        "email": "uni-tuebingen@mail.de"
+    },
+    {
+        "name": "Universität Hamburg",
+        "universitat_id": 152,
+        "country": "Germany",
+        "city": "Hamburg",
+        "email": "uni-hamburg@mail.de"
+    },
+    {
+        "name": "Universität zu Köln",
+        "universitat_id": 153,
+        "country": "Germany",
+        "city": "Cologne",
+        "email": "uni-koeln@mail.de"
+    },
+    {
+        "name": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+        "universitat_id": 154,
+        "country": "Germany",
+        "city": "Bonn",
+        "email": "uni-bonn@mail.de"
+    },
+    {
+        "name": "Goethe-Universität Frankfurt",
+        "universitat_id": 155,
+        "country": "Germany",
+        "city": "Frankfurt",
+        "email": "goethe-uni@mail.de"
+    },
+    {
+        "name": "Universität Stuttgart",
+        "universitat_id": 156,
+        "country": "Germany",
+        "city": "Stuttgart",
+        "email": "uni-stuttgart@mail.de"
+    },
+    {
+        "name": "Karlsruher Institut für Technologie",
+        "universitat_id": 157,
+        "country": "Germany",
+        "city": "Karlsruhe",
+        "email": "kit@mail.de"
+    },
+    {
+        "name": "Technische Universität Dresden",
+        "universitat_id": 158,
+        "country": "Germany",
+        "city": "Dresden",
+        "email": "tu-dresden@mail.de"
+    },
+    {
+        "name": "Universität Leipzig",
+        "universitat_id": 159,
+        "country": "Germany",
+        "city": "Leipzig",
+        "email": "uni-leipzig@mail.de"
+    },
+    {
+        "name": "Georg-August-Universität Göttingen",
+        "universitat_id": 160,
+        "country": "Germany",
+        "city": "Göttingen",
+        "email": "uni-goettingen@mail.de"
+    },
+    {
+        "name": "University of Cambridge",
+        "universitat_id": 161,
+        "country": "United Kingdom",
+        "city": "Cambridge",
+        "email": "cam@mail.uk"
+    },
+    {
+        "name": "Imperial College London",
+        "universitat_id": 162,
+        "country": "United Kingdom",
+        "city": "London",
+        "email": "imperial@mail.uk"
+    },
+    {
+        "name": "University College London",
+        "universitat_id": 163,
+        "country": "United Kingdom",
+        "city": "London",
+        "email": "ucl@mail.uk"
+    },
+    {
+        "name": "London School of Economics",
+        "universitat_id": 164,
+        "country": "United Kingdom",
+        "city": "London",
+        "email": "lse@mail.uk"
+    },
+    {
+        "name": "King's College London",
+        "universitat_id": 165,
+        "country": "United Kingdom",
+        "city": "London",
+        "email": "kcl@mail.uk"
+    },
+    {
+        "name": "University of Edinburgh",
+        "universitat_id": 166,
+        "country": "United Kingdom",
+        "city": "Edinburgh",
+        "email": "ed@mail.uk"
+    },
+    {
+        "name": "University of Manchester",
+        "universitat_id": 167,
+        "country": "United Kingdom",
+        "city": "Manchester",
+        "email": "manchester@mail.uk"
+    },
+    {
+        "name": "University of Bristol",
+        "universitat_id": 168,
+        "country": "United Kingdom",
+        "city": "Bristol",
+        "email": "bristol@mail.uk"
+    },
+    {
+        "name": "University of Warwick",
+        "universitat_id": 169,
+        "country": "United Kingdom",
+        "city": "Coventry",
+        "email": "warwick@mail.uk"
+    },
+    {
+        "name": "University of Glasgow",
+        "universitat_id": 170,
+        "country": "United Kingdom",
+        "city": "Glasgow",
+        "email": "glasgow@mail.uk"
+    },
+    {
+        "name": "University of Birmingham",
+        "universitat_id": 171,
+        "country": "United Kingdom",
+        "city": "Birmingham",
+        "email": "bham@mail.uk"
+    },
+    {
+        "name": "University of Leeds",
+        "universitat_id": 172,
+        "country": "United Kingdom",
+        "city": "Leeds",
+        "email": "leeds@mail.uk"
+    },
+    {
+        "name": "University of Sheffield",
+        "universitat_id": 173,
+        "country": "United Kingdom",
+        "city": "Sheffield",
+        "email": "sheffield@mail.uk"
+    },
+    {
+        "name": "University of Nottingham",
+        "universitat_id": 174,
+        "country": "United Kingdom",
+        "city": "Nottingham",
+        "email": "nottingham@mail.uk"
+    },
+    {
+        "name": "University of Southampton",
+        "universitat_id": 175,
+        "country": "United Kingdom",
+        "city": "Southampton",
+        "email": "soton@mail.uk"
+    },
+    {
+        "name": "University of Amsterdam",
+        "universitat_id": 176,
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "email": "uva@mail.nl"
+    },
+    {
+        "name": "Erasmus University Rotterdam",
+        "universitat_id": 177,
+        "country": "Netherlands",
+        "city": "Rotterdam",
+        "email": "eur@mail.nl"
+    },
+    {
+        "name": "Leiden University",
+        "universitat_id": 178,
+        "country": "Netherlands",
+        "city": "Leiden",
+        "email": "leidenuniv@mail.nl"
+    },
+    {
+        "name": "Utrecht University",
+        "universitat_id": 179,
+        "country": "Netherlands",
+        "city": "Utrecht",
+        "email": "uu@mail.nl"
+    },
+    {
+        "name": "Wageningen University",
+        "universitat_id": 180,
+        "country": "Netherlands",
+        "city": "Wageningen",
+        "email": "wur@mail.nl"
+    },
+    {
+        "name": "Eindhoven University of Technology",
+        "universitat_id": 181,
+        "country": "Netherlands",
+        "city": "Eindhoven",
+        "email": "tue@mail.nl"
+    },
+    {
+        "name": "University of Groningen",
+        "universitat_id": 182,
+        "country": "Netherlands",
+        "city": "Groningen",
+        "email": "rug@mail.nl"
+    },
+    {
+        "name": "Vrije Universiteit Amsterdam",
+        "universitat_id": 183,
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "email": "vu@mail.nl"
+    },
+    {
+        "name": "Maastricht University",
+        "universitat_id": 184,
+        "country": "Netherlands",
+        "city": "Maastricht",
+        "email": "maastrichtuniversity@mail.nl"
+    },
+    {
+        "name": "Universidade do Porto",
+        "universitat_id": 185,
+        "country": "Portugal",
+        "city": "Porto",
+        "email": "uporto@mail.pt"
+    },
+    {
+        "name": "Universidade de Coimbra",
+        "universitat_id": 186,
+        "country": "Portugal",
+        "city": "Coimbra",
+        "email": "uc@mail.pt"
+    },
+    {
+        "name": "Universidade Nova de Lisboa",
+        "universitat_id": 187,
+        "country": "Portugal",
+        "city": "Lisbon",
+        "email": "unl@mail.pt"
+    },
+    {
+        "name": "Instituto Superior Técnico",
+        "universitat_id": 188,
+        "country": "Portugal",
+        "city": "Lisbon",
+        "email": "ist@mail.pt"
+    },
+    {
+        "name": "Universidade do Minho",
+        "universitat_id": 189,
+        "country": "Portugal",
+        "city": "Braga",
+        "email": "uminho@mail.pt"
+    },
+    {
+        "name": "Universidade de Aveiro",
+        "universitat_id": 190,
+        "country": "Portugal",
+        "city": "Aveiro",
+        "email": "ua@mail.pt"
+    },
+    {
+        "name": "Université catholique de Louvain",
+        "universitat_id": 191,
+        "country": "Belgium",
+        "city": "Louvain-la-Neuve",
+        "email": "uclouvain@mail.be"
+    },
+    {
+        "name": "Universiteit Gent",
+        "universitat_id": 192,
+        "country": "Belgium",
+        "city": "Ghent",
+        "email": "ugent@mail.be"
+    },
+    {
+        "name": "Vrije Universiteit Brussel",
+        "universitat_id": 193,
+        "country": "Belgium",
+        "city": "Brussels",
+        "email": "vub@mail.be"
+    },
+    {
+        "name": "Université libre de Bruxelles",
+        "universitat_id": 194,
+        "country": "Belgium",
+        "city": "Brussels",
+        "email": "ulb@mail.be"
+    },
+    {
+        "name": "Universiteit Antwerpen",
+        "universitat_id": 195,
+        "country": "Belgium",
+        "city": "Antwerp",
+        "email": "uantwerpen@mail.be"
+    },
+    {
+        "name": "Universität Zürich",
+        "universitat_id": 196,
+        "country": "Switzerland",
+        "city": "Zurich",
+        "email": "uzh@mail.ch"
+    },
+    {
+        "name": "EPFL",
+        "universitat_id": 197,
+        "country": "Switzerland",
+        "city": "Lausanne",
+        "email": "epfl@mail.ch"
+    },
+    {
+        "name": "Université de Genève",
+        "universitat_id": 198,
+        "country": "Switzerland",
+        "city": "Geneva",
+        "email": "unige@mail.ch"
+    },
+    {
+        "name": "Universität Basel",
+        "universitat_id": 199,
+        "country": "Switzerland",
+        "city": "Basel",
+        "email": "unibas@mail.ch"
+    },
+    {
+        "name": "Universität Bern",
+        "universitat_id": 200,
+        "country": "Switzerland",
+        "city": "Bern",
+        "email": "unibe@mail.ch"
+    },
+    {
+        "name": "Technische Universität Wien",
+        "universitat_id": 201,
+        "country": "Austria",
+        "city": "Vienna",
+        "email": "tuwien@mail.at"
+    },
+    {
+        "name": "Universität Innsbruck",
+        "universitat_id": 202,
+        "country": "Austria",
+        "city": "Innsbruck",
+        "email": "uibk@mail.at"
+    },
+    {
+        "name": "Universität Graz",
+        "universitat_id": 203,
+        "country": "Austria",
+        "city": "Graz",
+        "email": "uni-graz@mail.at"
+    },
+    {
+        "name": "Technische Universität Graz",
+        "universitat_id": 204,
+        "country": "Austria",
+        "city": "Graz",
+        "email": "tugraz@mail.at"
+    },
+    {
+        "name": "Wirtschaftsuniversität Wien",
+        "universitat_id": 205,
+        "country": "Austria",
+        "city": "Vienna",
+        "email": "wu@mail.at"
+    },
+    {
+        "name": "University of Copenhagen",
+        "universitat_id": 206,
+        "country": "Denmark",
+        "city": "Copenhagen",
+        "email": "ku@mail.dk"
+    },
+    {
+        "name": "Technical University of Denmark",
+        "universitat_id": 207,
+        "country": "Denmark",
+        "city": "Lyngby",
+        "email": "dtu@mail.dk"
+    },
+    {
+        "name": "Aarhus University",
+        "universitat_id": 208,
+        "country": "Denmark",
+        "city": "Aarhus",
+        "email": "au@mail.dk"
+    },
+    {
+        "name": "Copenhagen Business School",
+        "universitat_id": 209,
+        "country": "Denmark",
+        "city": "Copenhagen",
+        "email": "cbs@mail.dk"
+    },
+    {
+        "name": "University of Southern Denmark",
+        "universitat_id": 210,
+        "country": "Denmark",
+        "city": "Odense",
+        "email": "sdu@mail.dk"
+    },
+    {
+        "name": "Karolinska Institutet",
+        "universitat_id": 211,
+        "country": "Sweden",
+        "city": "Stockholm",
+        "email": "ki@mail.se"
+    },
+    {
+        "name": "Lund University",
+        "universitat_id": 212,
+        "country": "Sweden",
+        "city": "Lund",
+        "email": "lu@mail.se"
+    },
+    {
+        "name": "Uppsala University",
+        "universitat_id": 213,
+        "country": "Sweden",
+        "city": "Uppsala",
+        "email": "uu@mail.se"
+    },
+    {
+        "name": "KTH Royal Institute of Technology",
+        "universitat_id": 214,
+        "country": "Sweden",
+        "city": "Stockholm",
+        "email": "kth@mail.se"
+    },
+    {
+        "name": "Stockholm University",
+        "universitat_id": 215,
+        "country": "Sweden",
+        "city": "Stockholm",
+        "email": "su@mail.se"
+    },
+    {
+        "name": "Chalmers University of Technology",
+        "universitat_id": 216,
+        "country": "Sweden",
+        "city": "Gothenburg",
+        "email": "chalmers@mail.se"
+    },
+    {
+        "name": "University of Gothenburg",
+        "universitat_id": 217,
+        "country": "Sweden",
+        "city": "Gothenburg",
+        "email": "gu@mail.se"
+    },
+    {
+        "name": "Stockholm School of Economics",
+        "universitat_id": 218,
+        "country": "Sweden",
+        "city": "Stockholm",
+        "email": "hhs@mail.se"
+    },
+    {
+        "name": "University of Oslo",
+        "universitat_id": 219,
+        "country": "Norway",
+        "city": "Oslo",
+        "email": "uio@mail.no"
+    },
+    {
+        "name": "Norwegian University of Science and Technology",
+        "universitat_id": 220,
+        "country": "Norway",
+        "city": "Trondheim",
+        "email": "ntnu@mail.no"
+    },
+    {
+        "name": "University of Bergen",
+        "universitat_id": 221,
+        "country": "Norway",
+        "city": "Bergen",
+        "email": "uib@mail.no"
+    },
+    {
+        "name": "Norwegian School of Economics",
+        "universitat_id": 222,
+        "country": "Norway",
+        "city": "Bergen",
+        "email": "nhh@mail.no"
+    },
+    {
+        "name": "UiT The Arctic University of Norway",
+        "universitat_id": 223,
+        "country": "Norway",
+        "city": "Tromsø",
+        "email": "uit@mail.no"
+    },
+    {
+        "name": "University of Helsinki",
+        "universitat_id": 224,
+        "country": "Finland",
+        "city": "Helsinki",
+        "email": "helsinki@mail.fi"
+    },
+    {
+        "name": "Aalto University",
+        "universitat_id": 225,
+        "country": "Finland",
+        "city": "Espoo",
+        "email": "aalto@mail.fi"
+    },
+    {
+        "name": "University of Turku",
+        "universitat_id": 226,
+        "country": "Finland",
+        "city": "Turku",
+        "email": "utu@mail.fi"
+    },
+    {
+        "name": "University of Oulu",
+        "universitat_id": 227,
+        "country": "Finland",
+        "city": "Oulu",
+        "email": "oulu@mail.fi"
+    },
+    {
+        "name": "Tampere University",
+        "universitat_id": 228,
+        "country": "Finland",
+        "city": "Tampere",
+        "email": "tuni@mail.fi"
+    },
+    {
+        "name": "University of Iceland",
+        "universitat_id": 229,
+        "country": "Iceland",
+        "city": "Reykjavik",
+        "email": "hi@mail.is"
+    },
+    {
+        "name": "Reykjavik University",
+        "universitat_id": 230,
+        "country": "Iceland",
+        "city": "Reykjavik",
+        "email": "ru@mail.is"
+    },
+    {
+        "name": "Trinity College Dublin",
+        "universitat_id": 231,
+        "country": "Ireland",
+        "city": "Dublin",
+        "email": "tcd@mail.ie"
+    },
+    {
+        "name": "University College Dublin",
+        "universitat_id": 232,
+        "country": "Ireland",
+        "city": "Dublin",
+        "email": "ucd@mail.ie"
+    },
+    {
+        "name": "National University of Ireland, Galway",
+        "universitat_id": 233,
+        "country": "Ireland",
+        "city": "Galway",
+        "email": "nuig@mail.ie"
+    },
+    {
+        "name": "University College Cork",
+        "universitat_id": 234,
+        "country": "Ireland",
+        "city": "Cork",
+        "email": "ucc@mail.ie"
+    },
+    {
+        "name": "Dublin City University",
+        "universitat_id": 235,
+        "country": "Ireland",
+        "city": "Dublin",
+        "email": "dcu@mail.ie"
+    },
+    {
+        "name": "Uniwersytet Warszawski",
+        "universitat_id": 236,
+        "country": "Poland",
+        "city": "Warsaw",
+        "email": "uw@mail.pl"
+    },
+    {
+        "name": "Uniwersytet Jagielloński",
+        "universitat_id": 237,
+        "country": "Poland",
+        "city": "Krakow",
+        "email": "uj@mail.pl"
+    },
+    {
+        "name": "Politechnika Warszawska",
+        "universitat_id": 238,
+        "country": "Poland",
+        "city": "Warsaw",
+        "email": "pw@mail.pl"
+    },
+    {
+        "name": "Uniwersytet im. Adama Mickiewicza",
+        "universitat_id": 239,
+        "country": "Poland",
+        "city": "Poznań",
+        "email": "amu@mail.pl"
+    },
+    {
+        "name": "Uniwersytet Wrocławski",
+        "universitat_id": 240,
+        "country": "Poland",
+        "city": "Wrocław",
+        "email": "uwr@mail.pl"
+    },
+    {
+        "name": "AGH University of Science and Technology",
+        "universitat_id": 241,
+        "country": "Poland",
+        "city": "Krakow",
+        "email": "agh@mail.pl"
+    },
+    {
+        "name": "Charles University",
+        "universitat_id": 242,
+        "country": "Czech Republic",
+        "city": "Prague",
+        "email": "cuni@mail.cz"
+    },
+    {
+        "name": "Czech Technical University in Prague",
+        "universitat_id": 243,
+        "country": "Czech Republic",
+        "city": "Prague",
+        "email": "cvut@mail.cz"
+    },
+    {
+        "name": "Masaryk University",
+        "universitat_id": 244,
+        "country": "Czech Republic",
+        "city": "Brno",
+        "email": "muni@mail.cz"
+    },
+    {
+        "name": "Brno University of Technology",
+        "universitat_id": 245,
+        "country": "Czech Republic",
+        "city": "Brno",
+        "email": "vutbr@mail.cz"
+    },
+    {
+        "name": "University of Economics, Prague",
+        "universitat_id": 246,
+        "country": "Czech Republic",
+        "city": "Prague",
+        "email": "vse@mail.cz"
+    },
+    {
+        "name": "Eötvös Loránd University",
+        "universitat_id": 247,
+        "country": "Hungary",
+        "city": "Budapest",
+        "email": "elte@mail.hu"
+    },
+    {
+        "name": "Budapest University of Technology and Economics",
+        "universitat_id": 248,
+        "country": "Hungary",
+        "city": "Budapest",
+        "email": "bme@mail.hu"
+    },
+    {
+        "name": "University of Debrecen",
+        "universitat_id": 249,
+        "country": "Hungary",
+        "city": "Debrecen",
+        "email": "unideb@mail.hu"
+    },
+    {
+        "name": "Corvinus University of Budapest",
+        "universitat_id": 250,
+        "country": "Hungary",
+        "city": "Budapest",
+        "email": "corvinus@mail.hu"
+    },
+    {
+        "name": "University of Szeged",
+        "universitat_id": 251,
+        "country": "Hungary",
+        "city": "Szeged",
+        "email": "u-szeged@mail.hu"
+    },
+    {
+        "name": "National and Kapodistrian University of Athens",
+        "universitat_id": 252,
+        "country": "Greece",
+        "city": "Athens",
+        "email": "uoa@mail.gr"
+    },
+    {
+        "name": "Aristotle University of Thessaloniki",
+        "universitat_id": 253,
+        "country": "Greece",
+        "city": "Thessaloniki",
+        "email": "auth@mail.gr"
+    },
+    {
+        "name": "National Technical University of Athens",
+        "universitat_id": 254,
+        "country": "Greece",
+        "city": "Athens",
+        "email": "ntua@mail.gr"
+    },
+    {
+        "name": "Athens University of Economics and Business",
+        "universitat_id": 255,
+        "country": "Greece",
+        "city": "Athens",
+        "email": "aueb@mail.gr"
+    },
+    {
+        "name": "University of Crete",
+        "universitat_id": 256,
+        "country": "Greece",
+        "city": "Heraklion",
+        "email": "uoc@mail.gr"
+    },
+    {
+        "name": "University of Ljubljana",
+        "universitat_id": 257,
+        "country": "Slovenia",
+        "city": "Ljubljana",
+        "email": "uni-lj@mail.si"
+    },
+    {
+        "name": "University of Maribor",
+        "universitat_id": 258,
+        "country": "Slovenia",
+        "city": "Maribor",
+        "email": "um@mail.si"
+    },
+    {
+        "name": "University of Zagreb",
+        "universitat_id": 259,
+        "country": "Croatia",
+        "city": "Zagreb",
+        "email": "unizg@mail.hr"
+    },
+    {
+        "name": "University of Split",
+        "universitat_id": 260,
+        "country": "Croatia",
+        "city": "Split",
+        "email": "unist@mail.hr"
+    },
+    {
+        "name": "University of Rijeka",
+        "universitat_id": 261,
+        "country": "Croatia",
+        "city": "Rijeka",
+        "email": "uniri@mail.hr"
+    },
+    {
+        "name": "University of Belgrade",
+        "universitat_id": 262,
+        "country": "Serbia",
+        "city": "Belgrade",
+        "email": "bg.ac@mail.rs"
+    },
+    {
+        "name": "University of Novi Sad",
+        "universitat_id": 263,
+        "country": "Serbia",
+        "city": "Novi Sad",
+        "email": "uns.ac@mail.rs"
+    },
+    {
+        "name": "Sofia University",
+        "universitat_id": 264,
+        "country": "Bulgaria",
+        "city": "Sofia",
+        "email": "uni-sofia@mail.bg"
+    },
+    {
+        "name": "University of National and World Economy",
+        "universitat_id": 265,
+        "country": "Bulgaria",
+        "city": "Sofia",
+        "email": "unwe@mail.bg"
+    },
+    {
+        "name": "Technical University of Sofia",
+        "universitat_id": 266,
+        "country": "Bulgaria",
+        "city": "Sofia",
+        "email": "tu-sofia@mail.bg"
+    },
+    {
+        "name": "University of Bucharest",
+        "universitat_id": 267,
+        "country": "Romania",
+        "city": "Bucharest",
+        "email": "unibuc@mail.ro"
+    },
+    {
+        "name": "Politehnica University of Bucharest",
+        "universitat_id": 268,
+        "country": "Romania",
+        "city": "Bucharest",
+        "email": "upb@mail.ro"
+    },
+    {
+        "name": "Babeș-Bolyai University",
+        "universitat_id": 269,
+        "country": "Romania",
+        "city": "Cluj-Napoca",
+        "email": "ubbcluj@mail.ro"
+    },
+    {
+        "name": "Alexandru Ioan Cuza University",
+        "universitat_id": 270,
+        "country": "Romania",
+        "city": "Iași",
+        "email": "uaic@mail.ro"
+    },
+    {
+        "name": "West University of Timișoara",
+        "universitat_id": 271,
+        "country": "Romania",
+        "city": "Timișoara",
+        "email": "uvt@mail.ro"
+    },
+    {
+        "name": "University of Tartu",
+        "universitat_id": 272,
+        "country": "Estonia",
+        "city": "Tartu",
+        "email": "ut@mail.ee"
+    },
+    {
+        "name": "Tallinn University of Technology",
+        "universitat_id": 273,
+        "country": "Estonia",
+        "city": "Tallinn",
+        "email": "ttu@mail.ee"
+    },
+    {
+        "name": "University of Latvia",
+        "universitat_id": 274,
+        "country": "Latvia",
+        "city": "Riga",
+        "email": "lu@mail.lv"
+    },
+    {
+        "name": "Riga Technical University",
+        "universitat_id": 275,
+        "country": "Latvia",
+        "city": "Riga",
+        "email": "rtu@mail.lv"
+    },
+    {
+        "name": "Vilnius University",
+        "universitat_id": 276,
+        "country": "Lithuania",
+        "city": "Vilnius",
+        "email": "vu@mail.lt"
+    },
+    {
+        "name": "Kaunas University of Technology",
+        "universitat_id": 277,
+        "country": "Lithuania",
+        "city": "Kaunas",
+        "email": "ktu@mail.lt"
+    },
+    {
+        "name": "Vilnius Gediminas Technical University",
+        "universitat_id": 278,
+        "country": "Lithuania",
+        "city": "Vilnius",
+        "email": "vgtu@mail.lt"
+    },
+    {
+        "name": "University of Warsaw",
+        "universitat_id": 279,
+        "country": "Poland",
+        "city": "Warsaw",
+        "email": "uw.edu@mail.pl"
+    },
+    {
+        "name": "University of Cyprus",
+        "universitat_id": 280,
+        "country": "Cyprus",
+        "city": "Nicosia",
+        "email": "ucy@mail.cy"
+    },
+    {
+        "name": "Cyprus University of Technology",
+        "universitat_id": 281,
+        "country": "Cyprus",
+        "city": "Limassol",
+        "email": "cut@mail.cy"
+    },
+    {
+        "name": "University of Malta",
+        "universitat_id": 282,
+        "country": "Malta",
+        "city": "Msida",
+        "email": "um@mail.mt"
+    },
+    {
+        "name": "University of Luxembourg",
+        "universitat_id": 283,
+        "country": "Luxembourg",
+        "city": "Luxembourg City",
+        "email": "uni@mail.lu"
+    },
+    {
+        "name": "University of Liechtenstein",
+        "universitat_id": 284,
+        "country": "Liechtenstein",
+        "city": "Vaduz",
+        "email": "uni@mail.li"
+    },
+    {
+        "name": "University of Monaco",
+        "universitat_id": 285,
+        "country": "Monaco",
+        "city": "Monaco",
+        "email": "iumi@mail.mc"
+    },
+    {
+        "name": "University of San Marino",
+        "universitat_id": 286,
+        "country": "San Marino",
+        "city": "San Marino",
+        "email": "unirsm@mail.sm"
+    },
+    {
+        "name": "Ss. Cyril and Methodius University",
+        "universitat_id": 287,
+        "country": "North Macedonia",
+        "city": "Skopje",
+        "email": "ukim@mail.mk"
+    },
+    {
+        "name": "University of Sarajevo",
+        "universitat_id": 288,
+        "country": "Bosnia and Herzegovina",
+        "city": "Sarajevo",
+        "email": "unsa@mail.ba"
+    },
+    {
+        "name": "University of Montenegro",
+        "universitat_id": 289,
+        "country": "Montenegro",
+        "city": "Podgorica",
+        "email": "ucg@mail.me"
+    },
+    {
+        "name": "University of Tirana",
+        "universitat_id": 290,
+        "country": "Albania",
+        "city": "Tirana",
+        "email": "ut@mail.al"
+    },
+    {
+        "name": "Comenius University Bratislava",
+        "universitat_id": 291,
+        "country": "Slovakia",
+        "city": "Bratislava",
+        "email": "uniba@mail.sk"
+    },
+    {
+        "name": "Slovak University of Technology",
+        "universitat_id": 292,
+        "country": "Slovakia",
+        "city": "Bratislava",
+        "email": "stuba@mail.sk"
+    },
+    {
+        "name": "University of Prishtina",
+        "universitat_id": 293,
+        "country": "Kosovo",
+        "city": "Prishtina",
+        "email": "uni-pr@mail.xk"
+    },
+    {
+        "name": "Taras Shevchenko National University of Kyiv",
+        "universitat_id": 294,
+        "country": "Ukraine",
+        "city": "Kyiv",
+        "email": "knu@mail.ua"
+    },
+    {
+        "name": "National Technical University of Ukraine",
+        "universitat_id": 295,
+        "country": "Ukraine",
+        "city": "Kyiv",
+        "email": "kpi@mail.ua"
+    },
+    {
+        "name": "Ivan Franko National University of Lviv",
+        "universitat_id": 296,
+        "country": "Ukraine",
+        "city": "Lviv",
+        "email": "lnu@mail.ua"
+    },
+    {
+        "name": "Belarusian State University",
+        "universitat_id": 297,
+        "country": "Belarus",
+        "city": "Minsk",
+        "email": "bsu@mail.by"
+    },
+    {
+        "name": "Moldova State University",
+        "universitat_id": 298,
+        "country": "Moldova",
+        "city": "Chișinău",
+        "email": "usm@mail.md"
+    },
+    {
+        "name": "Ivane Javakhishvili Tbilisi State University",
+        "universitat_id": 299,
+        "country": "Georgia",
+        "city": "Tbilisi",
+        "email": "tsu@mail.ge"
+    },
+    {
+        "name": "Yerevan State University",
+        "universitat_id": 300,
+        "country": "Armenia",
+        "city": "Yerevan",
+        "email": "ysu@mail.am"
+    },
+    {
+        "name": "Azerbaijan State Oil and Industry University",
+        "universitat_id": 301,
+        "country": "Azerbaijan",
+        "city": "Baku",
+        "email": "asoiu@mail.az"
+    },
+    {
+        "name": "Baku State University",
+        "universitat_id": 302,
+        "country": "Azerbaijan",
+        "city": "Baku",
+        "email": "bsu@mail.az"
+    },
+    {
+        "name": "University of Andorra",
+        "universitat_id": 303,
+        "country": "Andorra",
+        "city": "Sant Julià de Lòria",
+        "email": "uda@mail.ad"
+    },
+    {
+        "name": "Università degli Studi della Repubblica di San Marino",
+        "universitat_id": 304,
+        "country": "San Marino",
+        "city": "San Marino",
+        "email": "unirsm2@mail.sm"
+    },
+    {
+        "name": "University of Faroe Islands",
+        "universitat_id": 305,
+        "country": "Faroe Islands",
+        "city": "Tórshavn",
+        "email": "setur@mail.fo"
+    },
+    {
+        "name": "University of Greenland",
+        "universitat_id": 306,
+        "country": "Greenland",
+        "city": "Nuuk",
+        "email": "ilisimatusarfik@mail.gl"
+    },
+    {
+        "name": "Universidad de Murcia",
+        "universitat_id": 307,
+        "country": "Spain",
+        "city": "Murcia",
+        "email": "um@mail.es"
+    },
+    {
+        "name": "Universidad de Málaga",
+        "universitat_id": 308,
+        "country": "Spain",
+        "city": "Málaga",
+        "email": "uma@mail.es"
+    },
+    {
+        "name": "Universidad de Alicante",
+        "universitat_id": 309,
+        "country": "Spain",
+        "city": "Alicante",
+        "email": "ua@mail.es"
+    },
+    {
+        "name": "Universidad de Cantabria",
+        "universitat_id": 310,
+        "country": "Spain",
+        "city": "Santander",
+        "email": "unican@mail.es"
+    },
+    {
+        "name": "Universidad de Oviedo",
+        "universitat_id": 311,
+        "country": "Spain",
+        "city": "Oviedo",
+        "email": "uniovi@mail.es"
+    },
+    {
+        "name": "Universidad de Extremadura",
+        "universitat_id": 312,
+        "country": "Spain",
+        "city": "Badajoz",
+        "email": "unex@mail.es"
+    },
+    {
+        "name": "Universidad de Castilla-La Mancha",
+        "universitat_id": 313,
+        "country": "Spain",
+        "city": "Ciudad Real",
+        "email": "uclm@mail.es"
+    },
+    {
+        "name": "Universidad de La Rioja",
+        "universitat_id": 314,
+        "country": "Spain",
+        "city": "Logroño",
+        "email": "unirioja@mail.es"
+    },
+    {
+        "name": "Università degli Studi di Genova",
+        "universitat_id": 315,
+        "country": "Italy",
+        "city": "Genoa",
+        "email": "unige@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Bari",
+        "universitat_id": 316,
+        "country": "Italy",
+        "city": "Bari",
+        "email": "uniba@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Catania",
+        "universitat_id": 317,
+        "country": "Italy",
+        "city": "Catania",
+        "email": "unict@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Palermo",
+        "universitat_id": 318,
+        "country": "Italy",
+        "city": "Palermo",
+        "email": "unipa@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Trieste",
+        "universitat_id": 319,
+        "country": "Italy",
+        "city": "Trieste",
+        "email": "units@mail.it"
+    },
+    {
+        "name": "Università degli Studi di Verona",
+        "universitat_id": 320,
+        "country": "Italy",
+        "city": "Verona",
+        "email": "univr@mail.it"
+    },
+    {
+        "name": "University of Exeter",
+        "universitat_id": 321,
+        "country": "United Kingdom",
+        "city": "Exeter",
+        "email": "exeter@mail.uk"
+    },
+    {
+        "name": "Durham University",
+        "universitat_id": 322,
+        "country": "United Kingdom",
+        "city": "Durham",
+        "email": "durham@mail.uk"
+    },
+    {
+        "name": "University of St Andrews",
+        "universitat_id": 323,
+        "country": "United Kingdom",
+        "city": "St Andrews",
+        "email": "st-andrews@mail.uk"
+    },
+    {
+        "name": "University of York",
+        "universitat_id": 324,
+        "country": "United Kingdom",
+        "city": "York",
+        "email": "york@mail.uk"
+    },
+    {
+        "name": "Queen Mary University of London",
+        "universitat_id": 325,
+        "country": "United Kingdom",
+        "city": "London",
+        "email": "qmul@mail.uk"
+    },
+    {
+        "name": "Lancaster University",
+        "universitat_id": 326,
+        "country": "United Kingdom",
+        "city": "Lancaster",
+        "email": "lancaster@mail.uk"
+    },
+    {
+        "name": "Université de Rennes",
+        "universitat_id": 327,
+        "country": "France",
+        "city": "Rennes",
+        "email": "univ-rennes@mail.fr"
+    },
+    {
+        "name": "Université de Rouen Normandie",
+        "universitat_id": 328,
+        "country": "France",
+        "city": "Rouen",
+        "email": "univ-rouen@mail.fr"
+    },
+    {
+        "name": "Université de Nice Sophia Antipolis",
+        "universitat_id": 329,
+        "country": "France",
+        "city": "Nice",
+        "email": "unice@mail.fr"
+    },
+    {
+        "name": "Westfälische Wilhelms-Universität Münster",
+        "universitat_id": 330,
+        "country": "Germany",
+        "city": "Münster",
+        "email": "uni-muenster@mail.de"
+    },
+    {
+        "name": "Ruhr-Universität Bochum",
+        "universitat_id": 331,
+        "country": "Germany",
+        "city": "Bochum",
+        "email": "ruhr-uni-bochum@mail.de"
+    },
+    {
+        "name": "Technische Universität Darmstadt",
+        "universitat_id": 332,
+        "country": "Germany",
+        "city": "Darmstadt",
+        "email": "tu-darmstadt@mail.de"
+    },
+    {
+        "name": "Universität Mannheim",
+        "universitat_id": 333,
+        "country": "Germany",
+        "city": "Mannheim",
+        "email": "uni-mannheim@mail.de"
+    },
+    {
+        "name": "Universität des Saarlandes",
+        "universitat_id": 334,
+        "country": "Germany",
+        "city": "Saarbrücken",
+        "email": "uni-saarland@mail.de"
     }
 ]

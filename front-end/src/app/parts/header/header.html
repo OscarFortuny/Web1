@@ -2,18 +2,14 @@
 
   <nav>
     <a routerLink="/">Inici</a>
+    <a routerLink="/about">Sobre nosaltres</a>
     <a routerLink="/search">Cercar</a>
     <a routerLink="/create-group" *ngIf="!authService.currentUser()?.grup_id">Crea el teu grup</a>
     <a routerLink="/chat" *ngIf="authService.currentUser()?.grup_id" class="chat-link">💬 Xat</a>
-    <a routerLink="/about">Sobre nosaltres</a>
     <a routerLink="/profile" *ngIf="authService.isLoggedIn()">Perfil</a>
 
-    <!-- Login/Logout -->
+    <!-- Login -->
     <a routerLink="/login" *ngIf="!authService.isLoggedIn()" class="login-btn">Entrar</a>
-    <div class="user-menu" *ngIf="authService.isLoggedIn()">
-      <span class="user-name">👤 {{ authService.currentUser()?.name }}</span>
-      <a (click)="logout()" class="logout-btn">Tancar sessió</a>
-    </div>
   </nav>
 
 </header>
